@@ -109,7 +109,6 @@ const HamburgerMenu = styled.span`
     /* 1024 px */
     display: flex;
   }
-
   &::after,
   &::before {
     content: " ";
@@ -120,7 +119,6 @@ const HamburgerMenu = styled.span`
     position: absolute;
     transition: all 0.3s ease;
   }
-
   &::after {
     top: ${(props) => (props.click ? "0.3rem" : "0.5rem")};
     transform: ${(props) => (props.click ? "rotate(-40deg)" : "rotate(0)")};
