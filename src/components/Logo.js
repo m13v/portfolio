@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const LogoText = styled.h1`
 font-family: 'Akaya Telivigala', cursive;
-font-size: ${props => props.theme.fontxxxl};
+font-size: ${props => props.theme.fontxl};
 color: ${props => props.theme.text};
 transition: all 0.2s ease;
 
@@ -12,8 +12,8 @@ transition: all 0.2s ease;
     transform: scale(1.1);
 }
 
-@media (max-width: 64em){
-font-size: ${props => props.theme.fontxxl};
+@media (max-width: 80em){
+font-size: ${props => props.theme.fontxl};
 
 }
 `
@@ -22,7 +22,7 @@ const Logo = () => {
   return (
     <LogoText>
         <Link to="/">
-        W.
+        Matthew Diakonov
         </Link>
     </LogoText>
   )

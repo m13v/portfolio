@@ -77,7 +77,7 @@ const TypeWriterText = () => {
   return (
     <>
         <Title>
-      Discover a new era of cool
+      From Curiosity to Creation
       <Typewriter
         options={{
           autoStart: true,
@@ -85,23 +85,26 @@ const TypeWriterText = () => {
         }}
         onInit={(typewriter) => {
           typewriter
-            .typeString(`<span class="text-1">NFTs.</span>`)
-            .pauseFor(2000)
+            .typeString(`<span class="text-1">Machine learning.</span>`)
+            .pauseFor(0)
             .deleteAll()
-            .typeString(`<span class="text-2">Collectible Items.</span>`)
-            .pauseFor(2000)
+            .typeString(`<span class="text-2">Agentic pipelines.</span>`)
+            .pauseFor(0)
             .deleteAll()
-            .typeString(`<span class="text-3">Ape Killers!</span>`)
-            .pauseFor(2000)
+            .typeString(`<span class="text-3">Vipassna and EEG.</span>`)
+            .pauseFor(0)
             .deleteAll()
             .start();
         }}
       />
       
     </Title>
-    <SubTitle>Bored Of Apes? Try Something New.</SubTitle>
+    <SubTitle>I'm a generalist, at the intersection of engineering, the startup world, vipassana meditation, and sports.
+      <br /> <br />
+      Right now, I have the bandwidth to work on a new project, either something open-source, or a potential startup. I'm not looking for a job though
+    </SubTitle>
     <ButtonContainer>
-    <Button text="Explore" link="#about" />
+    <Button text="Story" link="#about" />
     </ButtonContainer>
     </>
   );

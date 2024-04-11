@@ -150,24 +150,24 @@ const Navigation = () => {
     <Section id="navigation">
       <NavBar>
         <Logo />
-        <HamburgerMenu click={+click} onClick={() => setClick(!click)}>
+        {/* <HamburgerMenu click={+click} onClick={() => setClick(!click)}>
           &nbsp;
-        </HamburgerMenu>
+        </HamburgerMenu> */}
         <Menu click={+click}>
           <MenuItem onClick={() => scrollTo("home")}>Home</MenuItem>
-          <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
-          <MenuItem onClick={() => scrollTo("roadmap")}>Roadmap</MenuItem>
-          <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>
-          <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
-          <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
+          <MenuItem onClick={() => scrollTo("about")}>Story</MenuItem>
+          <MenuItem onClick={() => scrollTo("roadmap")}>Life's journey</MenuItem>
+          <MenuItem onClick={() => scrollTo("showcase")}>Projects</MenuItem>
+          <MenuItem onClick={() => scrollTo("team")}>Best friends</MenuItem>
+          <MenuItem onClick={() => scrollTo("faq")}>What's next</MenuItem>
           <MenuItem>
             <div className="mobile">
-              <Button text="Connect Wallet" link="https://google.com" />
+              <Button text="LinkedIn" link="https://www.linkedin.com/in/matthew-diakonov-a84a1911/" />
             </div>
           </MenuItem>
         </Menu>
         <div className="desktop">
-          <Button text="Connect Wallet" link="https://google.com" />
+          <Button text="LinkedIn" link="https://www.linkedin.com/in/matthew-diakonov-a84a1911/" />
         </div>
       </NavBar>
     </Section>
