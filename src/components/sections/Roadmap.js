@@ -211,7 +211,7 @@ const Roadmap = () => {
 
   return (
     <Section id="roadmap">
-      <Title>Roadmap</Title>
+      <Title>Life's journey</Title>
       <Container>
         <SvgContainer>
           <DrawSvg />
@@ -277,9 +277,9 @@ const Roadmap = () => {
               <>
                 The next two jobs followed the same logic. I wanted to develop my communication skills, so where did I go? I went to work at a local Best Buy store (Technopark in Russia), did my fair share of selling juice makers, and did it well. Then I went on to work at Raiffeisenbank, where I learned the ropes of being precise and attentive. It was my first experience of mundane corporate life.
                 <br /><br />
-                Funny story and a big lesson: my colleague Alexander and I created a small project where we would run a pre-approval process for loans and get a commission for every approved loan, even though not every customer would end up getting one. We had an insane number of applications to process, to the extent that we hired other colleagues internally to help us process them.
+                Funny story and a big lesson: my colleague Alexander and I hacked the bank bonus system, in a legal way. Back then, every rep would be rewarded for how many approved loan applications they brought in, not for the actual loans given out. So, we created a small project where we would run a pre-approval process for loans and get a commission for every approved loan, even though not every customer would end up getting one. We basically went around the bank's corporate clients and asked employees if they wanted to know how much of a loan they could get. We had an insane number of applications to process, to the extent that we hired other colleagues internally to help us process them.
                 <br /><br />
-                It was so much fun making tons of bonuses. But then the bank got suspicious of us, started an investigation, and they didn't like our project at all, even though it was bringing in new business to the bank. They eventually fired me on the grounds of breaking the internal procedure of how applications were processed, because I was not allowed to reassign any of my work to other employees. I was 19 years old. I was devastated and literally cried for being unfairly treated. But I learned a big lesson: you can't be a cowboy in the corporate world, you can't do anything without a prior approval.
+                It was so much fun making tons of bonuses. But then the bank got suspicious of us, started an investigation, and they didn't like our project at all, even though some customers would end up getting loans. They eventually fired me on the grounds of breaking the internal procedure of how applications were processed, because I was not allowed to reassign any of my work to other employees. I was 19 years old. I was devastated. But I learned a big lesson: you can't be a cowboy in the corporate world, you can't do anything without a prior approval.
                 <br /><br />
                 The funniest thing, though, is that the next year, the bank implemented this project as a de facto standard approach to selling loans, and somebody probably got a huge promotion for the idea. Another validation check point.
               </>
@@ -287,8 +287,34 @@ const Roadmap = () => {
           />
           <RoadMapItem
             addToRef={addToRefs}
-            title="Holders Ranking"
-            subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+            title="First legit company. First software product (2008)"
+            subtext={
+              <>
+                It all started with a random project. Our friend Pavel approached us with an opportunity to work on a warehouse outstaffing project for stocktaking procedures. At first, it seemed like a simple task, but we quickly realized the potential to streamline the process with custom software.
+                <br /><br />
+                Excited by the challenge, we dove into building a solution that could manage the entire stocktaking workflow. From assigning tasks to tracking progress and generating reports, we wanted to create a tool that would make the process more efficient and less error-prone.
+                <br /><br />
+                As with any first-time endeavor, we encountered our fair share of obstacles. Looking back, it's clear that we were a bit naive in our approach to building production-ready software. We made mistakes, learned from them, and continuously improved our product.
+                <br /><br />
+                Despite the challenges, our hard work paid off. We managed to attract a few clients. To our surprise, this small project turned out to be quite lucrative. We generated over $500k in revenue, although a significant portion of it went towards covering the headcount costs.
+              </>
+            }
+          />
+          <RoadMapItem
+            addToRef={addToRefs}
+            title="Consulting experience (2010-2015)"
+            subtext={
+              <>
+                Consulting was probably the most boring part of my life, despite being the most intense and educational experience.
+                <br /><br />
+                Coming from mostly technical and entrepreneurial background, aligning myself with the corporate world was a challenge.
+                <br /><br />
+                Day in and day out managing client expectations and just talking, which felt like a departure from my true passions.
+                <br /><br />
+                The remaining time was dedicated to project management and delivering enterprise software solutions. Tedious work, but I recognized its value to these dinasour companies.
+                <br /><br />
+                I persevered through five years of delivering polished, profitable projects to clients across Denmark, Italy, Russia, the UAE, and Egypt. My dedication earned me top performance ratings and several promotions along the way.              </>
+            }
           />
         </Items>
       </Container>

@@ -42,22 +42,20 @@ const SubTitle = styled.h3`
   font-size: ${(props) => props.theme.fontlg};
   text-transform: capitalize;
   color: ${props => `rgba(${props.theme.textRgba}, 0.6)`};
-  font-weight:600;
+  font-weight: 600;
   margin-bottom: 1rem;
   width: 80%;
   align-self: flex-start;
+  text-align: left;
 
   @media (max-width: 40em) {
     font-size: ${(props) => props.theme.fontmd};
-
   }
 
-  @media (max-width: 48em) { 
+  @media (max-width: 48em) {
     align-self: center;
-    text-align:center;
   }
-  
-`
+`;
 
 const ButtonContainer = styled.div`
  width: 80%;
@@ -99,13 +97,24 @@ const TypeWriterText = () => {
       />
       
     </Title>
-    <SubTitle>I'm a generalist, at the intersection of engineering, the startup world, vipassana meditation, and sports.
-      <br /> <br />
-      Right now, I have the bandwidth to work on a new project, either something open-source, or a potential startup. I'm not looking for a job though
+    <SubTitle>I'm a generalist, at the intersection of: 
+        <br />
+        - engineering (won 3 hackathons in the Bay),
+        <br />
+        - the startup world (1 exit, 3 funded startups),
+        <br />
+        - vipassana meditation (60d of courses, 215d of practice),
+        <br />
+        - and sports (4.0 @ pickleball, 7.4m/mi -5mi @ running).
+        <br /> <br />
+        Right now, I have the bandwidth to work on a new project, either something open-source, or a potential startup. I'm not looking for a job though
+        <br /> <br />
+        Single, no kids 😢
     </SubTitle>
-    <ButtonContainer>
+    {/* <ButtonContainer>
     <Button text="Story" link="#about" />
-    </ButtonContainer>
+    <Button text="Life's journey" link="#roadmap" />  
+    </ButtonContainer> */}
     </>
   );
 };

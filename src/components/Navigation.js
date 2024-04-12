@@ -155,7 +155,7 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("home")}>Home</MenuItem>
           <MenuItem onClick={() => scrollTo("about")}>Story</MenuItem>
           <MenuItem onClick={() => scrollTo("roadmap")}>Life's journey</MenuItem>
-          <MenuItem onClick={() => scrollTo("showcase")}>Projects</MenuItem>
+          <MenuItem onClick={() => scrollTo("showcase")}>Tech stuff</MenuItem>
           <MenuItem onClick={() => scrollTo("team")}>Best friends</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>What's next</MenuItem>
           <MenuItem>
