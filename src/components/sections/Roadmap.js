@@ -30,7 +30,7 @@ const Title = styled.h1`
 `;
 const Container = styled.div`
   width: 70%;
-  height: 200vh;
+  height: auto;
   background-color: ${(props) => props.theme.body};
   margin: 0 auto;
   display: flex;
@@ -115,24 +115,25 @@ const Item = styled.li`
 `;
 const ItemContainer = styled.div`
   width: 40%;
-  height: fit-content;
-  padding: 1rem;
+  height: auto;  // Ensure the height adjusts based on content
+  padding: 2rem; // Adjust padding to ensure text does not touch the edges
   border: 3px solid ${(props) => props.theme.text};
+  margin-top: 1rem; // Ensure there's space at the top of the container
 
   @media (max-width: 48em) {
     width: 70%;
-
   }
 `;
 
 const Box = styled.p`
-  height: fit-content;
   background-color: ${(props) => props.theme.carouselColor};
   color: ${(props) => props.theme.text};
   padding: 1rem;
   position: relative;
   border: 1px solid ${(props) => props.theme.text};
+  overflow: visible; // Make sure overflow content is visible
 `;
+
 const SubTitle = styled.span`
   display: block;
   font-size: ${(props) => props.theme.fontxl};
@@ -184,13 +185,14 @@ const Roadmap = () => {
   useLayoutEffect(() => {
     let t1 = gsap.timeline();
     revealRefs.current.forEach((el, index) => {
+      const startY = index === 0 ? "10%" : "10";  // Start the first element lower
       t1.fromTo(
         el.childNodes[0],
         {
-          y: "0",
+          y: startY,
         },
         {
-          y: "-30%",
+          y: "-6%",
 
           scrollTrigger: {
             id: `section-${index + 1}`,
@@ -314,6 +316,49 @@ const Roadmap = () => {
                 The remaining time was dedicated to project management and delivering enterprise software solutions. Tedious work, but I recognized its value to these dinasour companies.
                 <br /><br />
                 I persevered through five years of delivering polished, profitable projects to clients across Denmark, Italy, Russia, the UAE, and Egypt. My dedication earned me top performance ratings and several promotions along the way.              </>
+            }
+          />
+          <RoadMapItem
+            addToRef={addToRefs}
+            title="All the way through Exit (2017)"
+            subtext={
+              <>
+                It was an incredible journey. I had saved up $150k before I left my comfortable job at Accenture and started a bootstrapped business with my university friend Alex.
+                <br /><br />
+                We almost went under water, but pivoted at the last second and found a lucrative niche of booking processing for hotels. 
+                <br /><br />
+                We quickly grew the company to 100 employees (5 engineers) and $8m in GMV. And sold part of the company within 18 months of starting it.
+              </>
+            }
+          />
+          <RoadMapItem
+            addToRef={addToRefs}
+            title="Keyrent"
+            subtext={
+              <>
+                Proptech management software, founder, 2017-2018. Scaled the company to 300 units. Achieved $1.3mm in GMV. Built the product with a team of 2 engineers                
+                <br /><br />
+              </>
+            }
+          />
+          <RoadMapItem
+            addToRef={addToRefs}
+            title="ARINA"
+            subtext={
+              <>
+                ML model for assessment of residential real estate, 2018-2022 (similar to Opendoor, Zillow). Built a team of 10 people (including 5 engineers). Achieved over $1mm in GMV               
+                <br /><br />
+              </>
+            }
+          />
+          <RoadMapItem
+            addToRef={addToRefs}
+            title="US"
+            subtext={
+              <>
+                Working on developer tools, LLM wrappers, function calling, agentic frameworks, chunking, embeddings, fine-tuning.               
+                <br /><br />
+              </>
             }
           />
         </Items>

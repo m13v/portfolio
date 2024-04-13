@@ -97,7 +97,7 @@ const TypeWriterText = () => {
       />
       
     </Title>
-    <SubTitle>I'm a generalist, at the intersection of: 
+    <SubTitle>I'm at the intersection of: 
         <br />
         - engineering (won 3 hackathons in the Bay),
         <br />
@@ -107,14 +107,13 @@ const TypeWriterText = () => {
         <br />
         - and sports (4.0 @ pickleball, 7.4m/mi -5mi @ running).
         <br /> <br />
-        Right now, I have the bandwidth to work on a new project, either something open-source, or a potential startup. I'm not looking for a job though
+        Right now, I have the bandwidth to work on a new project, either something open-source, or a potential startup.
         <br /> <br />
         Single, no kids 😢
     </SubTitle>
-    {/* <ButtonContainer>
-    <Button text="Story" link="#about" />
-    <Button text="Life's journey" link="#roadmap" />  
-    </ButtonContainer> */}
+    <ButtonContainer>
+    <Button text="Jump to tech stuff" link="#team" />
+    </ButtonContainer>
     </>
   );
 };
