@@ -193,7 +193,6 @@ const Roadmap = () => {
         },
         {
           y: "-6%",
-
           scrollTrigger: {
             id: `section-${index + 1}`,
             trigger: el,
