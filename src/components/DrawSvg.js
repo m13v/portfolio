@@ -50,7 +50,6 @@ const DrawSvg = () => {
 const ref = useRef(null);
 const ballRef = useRef(null);
 
-
 gsap.registerPlugin(ScrollTrigger);
 useLayoutEffect(() => {
   let element = ref.current;
