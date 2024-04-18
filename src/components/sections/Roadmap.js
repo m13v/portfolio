@@ -121,6 +121,7 @@ const ItemContainer = styled.div`
   padding: 2rem; // Adjust padding to ensure text does not touch the edges
   border: 3px solid ${(props) => props.theme.text};
   margin-top: 1rem; // Ensure there's space at the top of the container
+  text-align: left; // Ensure text is always aligned to the left
 
   @media (max-width: 48em) {
     width: 70%;
@@ -134,6 +135,7 @@ const Box = styled.p`
   position: relative;
   border: 1px solid ${(props) => props.theme.text};
   overflow: visible; // Make sure overflow content is visible
+  text-align: left; // Ensure text inside the box is aligned to the left
 `;
 
 const SubTitle = styled.span`
@@ -141,6 +143,7 @@ const SubTitle = styled.span`
   font-size: ${(props) => props.theme.fontxl};
   text-transform: capitalize;
   color: ${(props) => props.theme.text};
+  margin-bottom: 1rem; // Add space below the title
 
   @media (max-width: 40em) {
     font-size: ${(props) => props.theme.fontlg};
@@ -166,8 +169,8 @@ const ReadMoreButton = styled.button`
   border: none; // No border
   cursor: pointer;
   padding: 0.5em 1em; // Padding around the text
-  margin-top: 10px; // Space above the button
-  margin-left: 10px;
+  margin-top: 5px; // Space above the button
+  margin-left: 5px;
   align-self: flex-end; // Align to the right of the flex container
   border-radius: 20px; // Rounded corners
   text-decoration: underline; // Underline text
@@ -178,6 +181,12 @@ const ReadMoreButton = styled.button`
 const RoadMapItem = ({ title, subtext, subtext2, addToRef }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  // Function to handle the expansion and refresh ScrollTrigger
+  const handleReadMoreClick = () => {
+    setIsExpanded(true); // Expand the item
+    setTimeout(() => ScrollTrigger.refresh(), 0); // Refresh ScrollTrigger after the state update
+  };
+
   return (
     <Item ref={addToRef}>
       <ItemContainer>
@@ -186,7 +195,7 @@ const RoadMapItem = ({ title, subtext, subtext2, addToRef }) => {
           {subtext}
           {isExpanded && subtext2}
           {!isExpanded && (
-            <ReadMoreButton onClick={() => setIsExpanded(true)}>
+            <ReadMoreButton onClick={handleReadMoreClick}>
               Read more
             </ReadMoreButton>
           )}
@@ -222,9 +231,9 @@ const Roadmap = () => {
             id: `section-${index + 1}`,
             trigger: el,
             start: "top center+=200px",
-            end: "bottom center",
+            end: () => `+=${el.offsetHeight}`, // Adjust end point based on element height
             scrub: true,
-            // markers:true,
+            markers:false, //debugging
           },
         }
       );
@@ -271,8 +280,7 @@ const Roadmap = () => {
                 Back in the day, software development wasn't something you could image you could do yourself.
                 <br /><br />
                 It was mostly perceived as something big companies did, like Microsoft, Google, or Yandex in Russia. Luckily, my school
-                </>}
-            subtext2={<>
+                </>}subtext2={<>
             provided informatics classes where we learned how to write simple programs in Pascal and Visual Basic.
                 <br /><br />
                 It was an eye-opening experience to learn that you could program a computer to do a job for you, whatever it might be. I'm grateful to my informatics teacher Irina, who encouraged us to work on our own projects. That's when I started writing my own programs.
@@ -292,7 +300,7 @@ const Roadmap = () => {
               <>
                 This might sound counterintuitive, but my first job was actually at McDonald's. And it wasn't by accident.
                 <br /><br />
-                I remember that day very clearly when I came back from summer vacation, having just turned 16. My older brother Andrey sat with me to have a profound discussion about my future, as college was approaching. I'm so glad we had that conversation, and I still remember his words as if he said them now.
+                I remember that day very clearly when I came back from summer vacation, having just turned 16. </>}subtext2={<> My older brother Andrey sat with me to have a profound discussion about my future, as college was approaching. I'm so glad we had that conversation, and I still remember his words as if he said them now.
                 <br /><br />
                 What really struck me was when he said, "You know, you're a smart kid, but you're not street smart. You need to learn how to deal with people, work hard, and make money. You need to get a job."
                 <br /><br />
@@ -307,7 +315,7 @@ const Roadmap = () => {
             title="Another big lesson learned (2007)"
             subtext={
               <>
-                The next two jobs followed the same logic. I wanted to develop my communication skills, so where did I go? I went to work at a local Best Buy store (Technopark in Russia), did my fair share of selling juice makers, and did it well. Then I went on to work at Raiffeisenbank, where I learned the ropes of being precise and attentive. It was my first experience of mundane corporate life.
+                The next two jobs followed the same logic. I wanted to develop my communication skills, so where did I go? </>}subtext2={<> I went to work at a local Best Buy store (Technopark in Russia), did my fair share of selling juice makers, and did it well. Then I went on to work at Raiffeisenbank, where I learned the ropes of being precise and attentive. It was my first experience of mundane corporate life.
                 <br /><br />
                 Funny story and a big lesson: my colleague Alexander and I hacked the bank bonus system, in a legal way. Back then, every rep would be rewarded for how many approved loan applications they brought in, not for the actual loans given out. So, we created a small project where we would run a pre-approval process for loans and get a commission for every approved loan, even though not every customer would end up getting one. We basically went around the bank's corporate clients and asked employees if they wanted to know how much of a loan they could get. We had an insane number of applications to process, to the extent that we hired other colleagues internally to help us process them.
                 <br /><br />
@@ -322,7 +330,7 @@ const Roadmap = () => {
             title="First legit company. First software product (2008)"
             subtext={
               <>
-                It all started with a random project. Our friend Pavel approached us with an opportunity to work on a warehouse outstaffing project for stocktaking procedures. At first, it seemed like a simple task, but we quickly realized the potential to streamline the process with custom software.
+                It all started with a random project. Our friend Pavel approached us with an opportunity to work on </>}subtext2={<> a warehouse outstaffing project for stocktaking procedures. At first, it seemed like a simple task, but we quickly realized the potential to streamline the process with custom software.
                 <br /><br />
                 Excited by the challenge, we dove into building a solution that could manage the entire stocktaking workflow. From assigning tasks to tracking progress and generating reports, we wanted to create a tool that would make the process more efficient and less error-prone.
                 <br /><br />
@@ -337,7 +345,7 @@ const Roadmap = () => {
             title="Consulting experience (2010-2015)"
             subtext={
               <>
-                Consulting was probably the most boring part of my life, despite being the most intense and educational experience.
+                Consulting was probably the most </>}subtext2={<> boring part of my life, despite being the most intense and educational experience.
                 <br /><br />
                 Coming from mostly technical and entrepreneurial background, aligning myself with the corporate world was a challenge.
                 <br /><br />
@@ -353,7 +361,7 @@ const Roadmap = () => {
             title="All the way through Exit (2017)"
             subtext={
               <>
-                It was an incredible journey. I had saved up $150k before I left my comfortable job at Accenture and started a bootstrapped business with my university friend Alex.
+                It was an incredible journey. I had saved up $150k before I left my comfortable job at Accenture and </>}subtext2={<> started a bootstrapped business with my university friend Alex.
                 <br /><br />
                 We almost went under water, but pivoted at the last second and found a lucrative niche of booking processing for hotels. 
                 <br /><br />
@@ -366,7 +374,7 @@ const Roadmap = () => {
             title="Rent automation (2017-2018)"
             subtext={
               <>
-                After having the successful small exit experience, I felt so pumped. I thought I was a genius and could do anything. I started a new project in the real estate industry, building a platform to automate the rental process.
+                After having the successful small exit experience, I felt so pumped. I thought I was a genius and could do anything. I started a new project </>}subtext2={<> in the real estate industry, building a platform to automate the rental process.
                 <br /><br />
                 Oh, I wish I had been a quicker learner. The idea of rent automation is by all means a tar pit idea. It looks so plausible on the surface, right? Go and automate the archaic rental process of apartments, creating an Uber-like experience on Craigslist.
                 <br /><br />
@@ -387,7 +395,7 @@ const Roadmap = () => {
               <>
                 First legitimate experience in the AI/ML space. I'm deeply grateful to MESI university for introducing me to neural networks.
                 <br /><br />
-                Inspired by AI breakthroughs like DeepMind's AlphaGo defeating Go champion Lee Sedol, I launched a new project in the AI/ML sector.
+                Inspired by AI breakthroughs like DeepMind's AlphaGo defeating Go champion Lee Sedol, I </>}subtext2={<> launched a new project in the AI/ML sector.
                 <br /><br />
                 We analyzed millions of real estate sales records, merged them with all publicly available classifieds, and developed a model to determine the market price of any property.
                 <br /><br />
@@ -420,7 +428,7 @@ const Roadmap = () => {
             title="US journey (2022-Present)"
             subtext={
               <>
-                Oh, how I wished for a smooth transition to the US, but reality had other plans. My past achievements meant little here. Amidst personal upheavals, including a breakup and friends not following through on promises to relocate.
+                Oh, how I wished for a smooth transition to the US, but reality had other plans</>}subtext2={<>. My past achievements meant little here. Amidst personal upheavals, including a breakup and friends not following through on promises to relocate.
                 <br /><br />
                 I found myself at San Francisco airport in April 2022 all alone. Drying up savings, without connections, struggling with English, coding skills forgotten, and clueless about the US startup scene.
                 <br /><br />

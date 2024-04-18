@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, lazy, Suspense } from 'react';
 import styled, { keyframes } from 'styled-components'
 
 import img1 from '../../assets/Nfts/bighead.svg';
@@ -12,6 +12,26 @@ import img8 from '../../assets/Nfts/bighead-7.svg';
 import img9 from '../../assets/Nfts/bighead-8.svg';
 import img10 from '../../assets/Nfts/bighead-9.svg';
 import ETH from '../../assets/icons8-ethereum-48.png'
+import Loading from '../Loading';
+// import ConfettiComponent from '../Confetti';
+
+const ConfettiComponent = lazy(() => import("../Confetti"));
+
+const Title = styled.h1`
+  font-size: ${(props) => props.theme.fontxxl};
+  text-transform: capitalize;
+  color: ${(props) => props.theme.text};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  border-bottom: 2px solid ${(props) => props.theme.text};
+  width: fit-content;
+
+  @media (max-width: 40em) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
+`;
 
 const Section = styled.section`
 min-height: 100vh;
@@ -53,7 +73,7 @@ box-sizing:content-box;
 margin: 2rem 0;
 display: flex;
 
-animation: ${move}  linear infinite ${props => props.direction};
+animation: ${move}  linear infinite 20s;
 
 
 `
@@ -121,7 +141,7 @@ img{
 }
 `
 
-const NftItem = ({img, number=0, price=0, passRef}) => {
+const NftItem = ({ img, number = 0, price = 0, passRef, firstName, lastName }) => {
 
 let play = (e) => {
   passRef.current.style.animationPlayState = 'running';
@@ -131,53 +151,56 @@ let pause = (e) => {
 }
 
 
-  return(
-    <ImgContainer   onMouseOver={e => pause(e) }  onMouseOut={e => play(e) }  >
-      <img width={500} height={400}  src={img} alt="The Weirdos" />
-      <Details>
-        <div>
-          <span>Weirdos</span> <br />
-          <h1>#{number}</h1>
-        </div>
-
-        <div>
-          <span>Price</span>
-          <Price>
-          <img width={200} height={200}  src={ETH} alt="ETH" />
-          <h1>{Number(price).toFixed(1)}</h1>
-          </Price>
-        </div>
-      </Details>
-    </ImgContainer>
-  )
-} 
+return (
+  <ImgContainer onMouseOver={e => pause(e)} onMouseOut={e => play(e)}>
+    <img src={img} alt="The Weirdos" />
+    <Details>
+      <div>
+        <span>{firstName} {lastName}</span> {/* Display only first and last name */}
+      </div>
+    </Details>
+  </ImgContainer>
+)
+}
 
 
 const Showcase = () => {
 
   const Row1Ref = useRef(null);
   const Row2Ref = useRef(null);
-
-  return(
+  const Row3Ref = useRef(null);
+  const Row4Ref = useRef(null);
+  return (
     <Section id="showcase">
-    <Row direction="none" ref={Row1Ref}>
-      <NftItem img={img1}  number={852} price={1}   passRef = {Row1Ref} />
-      <NftItem img={img2}  number={123} price={1.2}   passRef = {Row1Ref} />
-      <NftItem img={img3}  number={456} price={2.5}   passRef = {Row1Ref} />
-      <NftItem img={img4}  number={666} price={3.5}   passRef = {Row1Ref} />
-      <NftItem img={img5}  number={452} price={4.7}   passRef = {Row1Ref} />
-
-
-    </Row>
-    <Row direction="reverse" ref={Row2Ref}>
-    <NftItem img={img6}  number={888} price={1.2}   passRef = {Row2Ref} />
-    <NftItem img={img7}  number={211} price={3.2}   passRef = {Row2Ref} />
-    <NftItem img={img8}  number={455} price={1.8}   passRef = {Row2Ref} />
-    <NftItem img={img9}  number={456} price={5.1}   passRef = {Row2Ref} />
-    <NftItem img={img10}  number={865} price={3.7}   passRef = {Row2Ref} />
-
-
-    </Row>
+    <Suspense fallback={<Loading />}>
+    <ConfettiComponent  /> </Suspense>
+      <Title>Gratitude</Title>
+      <Row direction="normal" ref={Row1Ref}>
+        <NftItem img={img1} number={852} price={1} passRef={Row1Ref} firstName="Marina" lastName="Diakonov" />
+        <NftItem img={img2} number={852} price={1} passRef={Row1Ref} firstName="Yury" lastName="Diakonov" />
+        <NftItem img={img3} number={123} price={1.2} passRef={Row1Ref} firstName="Irina" lastName="Victorovna" />
+        <NftItem img={img4} number={456} price={2.5} passRef={Row1Ref} firstName="Valentina" lastName="Alekseevna" />
+        <NftItem img={img5} number={666} price={3.5} passRef={Row1Ref} firstName="Andrey" lastName="Talalaev" />
+        <NftItem img={img6} number={452} price={4.7} passRef={Row1Ref} firstName="Alex" lastName="Boldyrev" />
+      </Row>
+      <Row direction="reverse" ref={Row2Ref}>
+        <NftItem img={img6} number={888} price={1.2} passRef={Row2Ref} firstName="Elizaveta" lastName="Litvinova" />
+        <NftItem img={img7} number={211} price={3.2} passRef={Row2Ref} firstName="Max" lastName="Irisov" />
+        <NftItem img={img8} number={455} price={1.8} passRef={Row2Ref} firstName="Raffaella" lastName="Campagnoli" />
+        <NftItem img={img9} number={456} price={5.1} passRef={Row2Ref} firstName="William" lastName="Durst" />
+      </Row>
+      <Row direction="reverse" ref={Row3Ref}>
+        <NftItem img={img6} number={452} price={4.7} passRef={Row1Ref} firstName="Alex" lastName="Reshetnikov" />
+        <NftItem img={img6} number={888} price={1.2} passRef={Row2Ref} firstName="Alex" lastName="Kravcov" />
+        <NftItem img={img7} number={211} price={3.2} passRef={Row2Ref} firstName="Yury" lastName="Kudryakov" />
+        <NftItem img={img8} number={455} price={1.8} passRef={Row2Ref} firstName="Veronika" lastName="Aksenova" />
+        <NftItem img={img9} number={456} price={5.1} passRef={Row2Ref} firstName="Ilya" lastName="Mehedkin" />
+      </Row>
+      <Row direction="reverse" ref={Row4Ref}>
+        <NftItem img={img6} number={452} price={4.7} passRef={Row1Ref} firstName="Nolan" lastName="Holden" />
+        <NftItem img={img6} number={888} price={1.2} passRef={Row2Ref} firstName="Kate" lastName="" />
+        <NftItem img={img7} number={211} price={3.2} passRef={Row2Ref} firstName="Bruce" lastName="Dockter" />
+      </Row>
     </Section>
   )
 }

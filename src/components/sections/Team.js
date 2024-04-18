@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy } from 'react'
 import styled from 'styled-components';
 
 import img1 from '../../assets/Nfts/bighead.svg';
@@ -10,10 +10,16 @@ import img6 from '../../assets/Nfts/bighead-5.svg';
 import img7 from '../../assets/Nfts/bighead-6.svg';
 import img8 from '../../assets/Nfts/bighead-7.svg';
 import img9 from '../../assets/Nfts/bighead-8.svg';
-import Loading from '../Loading';
-// import ConfettiComponent from '../Confetti';
-
-const ConfettiComponent = lazy(() => import("../Confetti"));
+import img10 from '../../assets/Nfts/bighead-8.svg';
+import img11 from '../../assets/Nfts/bighead-8.svg';
+import img12 from '../../assets/Nfts/bighead-8.svg';
+import img13 from '../../assets/Nfts/bighead-8.svg';
+import img14 from '../../assets/Nfts/bighead-8.svg';
+import img15 from '../../assets/Nfts/bighead-8.svg';
+import img16 from '../../assets/Nfts/bighead-8.svg';
+import img17 from '../../assets/Nfts/bighead-8.svg';
+import img18 from '../../assets/Nfts/bighead-8.svg';
+import img19 from '../../assets/Nfts/bighead-8.svg';
 
 
 const Section = styled.section`
@@ -138,21 +144,27 @@ const MemberComponent = ({img, name=" ",position=" "}) => {
 const Team = () => {
   return (
     <Section id="team">
-    <Suspense fallback={<Loading />}>
-    <ConfettiComponent  /> </Suspense>
-      <Title>Team</Title>
+      <Title>Recent Projects</Title>
       <Container>
-        <MemberComponent img={img1}  name="SKYBLAZE" position="founder" />
-        <MemberComponent img={img2}  name="MEGNUM" position="Co-Founder" />
-        <MemberComponent img={img3}  name="MONKEY KING" position="Director" />
-        <MemberComponent img={img4}  name="BLACK PANTHER" position="manager" />
-        <MemberComponent img={img5}  name="DEATHSTROKE" position="artist" />
-        <MemberComponent img={img6}  name="LAZY KONG" position="social media manager" />
-        <MemberComponent img={img7}  name="CYBER PUNK" position="Blockchain Specialist" />
-        <MemberComponent img={img8}  name="MONK" position="Web3 Developer" />
-        <MemberComponent img={img9}  name="BANANA" position="Graphic Designer" />
-        
-
+        <MemberComponent img={img1} name="Realtime Sora" position="Gamified immersive image generation. Control prompts with keyboard shortcuts. SD Lightning, 15 frames/sec." />
+        <MemberComponent img={img2} name="County Law RAG" position="Legal agent updating a vector database across all local county government websites, including materials published in PDF documents." />
+        <MemberComponent img={img3} name="GPT vs. Gemini" position="An easy way to compare outputs from different models. One message - two answers." />
+        <MemberComponent img={img4} name="Your Devin" position="Mistral 0.2 fine-tuned on your codebase directly in VS Code." />
+        <MemberComponent img={img5} name="SEMA: arXiv Search Agent" position="Research the latest academic papers using RAG, CoT, Crawler." />
+        <MemberComponent img={img6} name="YouTube GPT" position="Summarizes any video into chapters with clickable timestamp links." />
+        <MemberComponent img={img7} name="Semantic Chunking" position="Hierarchical chunking with LLMs allows for dynamic adjustment of chunk size based on semantic meaning." />
+        <MemberComponent img={img8} name="Docs2CLI" position="Search any documentation online without leaving your VS Code." />
+        <MemberComponent img={img9} name="Holodeck" position="AI tool that converts user analytics heatmaps into code improvements for your website. Run your A/B tests on autopilot." />
+        <MemberComponent img={img10} name="Reddit -> LinkedIn Reposting Tool" position="Crawls predefined subreddits and reposts top-performing content." />
+        <MemberComponent img={img11} name="Virtual Try-On" position="Uses AI to put clothes on models, making a merchant's life easier." />
+        <MemberComponent img={img12} name="Image Gen Tool" position="1 million visitors in 3 months, 25k MAU, $10k MRR." />
+        <MemberComponent img={img13} name="Feliciti" position="Matching platform for residents and co-living houses." />
+        <MemberComponent img={img14} name="Warm Intro" position="Peer-to-peer referral system for hiring." />
+        <MemberComponent img={img15} name="GetQ" position="Cloud compute. Templates for your frontend and backend." />
+        <MemberComponent img={img16} name="WEB3 Developer Leaderboard" position="Links GitHub contributions to Dune Analytics performance of web3 protocols." />
+        <MemberComponent img={img17} name="Betzy" position="Bet on your good habits with friends." />
+        <MemberComponent img={img18} name="TimeTree" position="Time tracker for personal productivity." />
+        <MemberComponent img={img19} name="Newcomers" position="Matchmaking among newcomers and locals for mutual help." />
       </Container>
     </Section>
   )
