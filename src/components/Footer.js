@@ -2,9 +2,8 @@ import React, { lazy, Suspense } from 'react'
 import styled from 'styled-components'
 // import Banner from './Banner'
 import Logo from './Logo'
-
-import Facebook from '../Icons/Facebook'
-import Instagram from '../Icons/Instagram'
+import Telegram from '../Icons/Telegram';
+import Github from '../Icons/Github';
 import Twitter from '../Icons/Twitter'
 import LinkedIn from '../Icons/LinkedIn'
 import Loading from './Loading'
@@ -140,25 +139,25 @@ const Footer = () => {
     <Left> 
     <Logo />
     <IconList>
-      <a href="http://facebook.com" target='_blank' 
+      <a href="https://t.me/matthew_ddi" target='_blank' 
       rel="noopener noreferrer"
       aria-label='facebook'
       >
-        <Facebook />
+        <Telegram />
       </a>
-      <a href="https://www.instagram.com/code.bucks/" target='_blank' 
+      <a href="https://github.com/matthew-heartful" target='_blank' 
       rel="noopener noreferrer"
       aria-label='instagram'
       >
-        <Instagram />
+        <Github />
       </a>
-      <a href="https://twitter.com/code_bucks" target='_blank' 
+      <a href="https://twitter.com/MatthewHeartful" target='_blank' 
       rel="noopener noreferrer"
       aria-label='twitter'
       >
         <Twitter />
       </a>
-      <a href="https://www.linkedin.com/in/codebucks/" target='_blank' 
+      <a href="https://www.linkedin.com/in/matthew-diakonov-a84a1911/" target='_blank' 
       rel="noopener noreferrer"
       aria-label='linkedin'
       >
@@ -178,12 +177,7 @@ const Footer = () => {
       </Container>
       <Bottom>
         <span>
-          &copy; {new Date().getFullYear()} Weirdos Club. All rights reserved.
-        </span>
-        <span>
-          Made with &#10084; by <a href="https://devdreaming.com/about" target="_blank" rel="dofollow noreferrer">
-            CodeBucks
-          </a>
+          &copy; {new Date().getFullYear()} Personal website. All rights reserved.
         </span>
       </Bottom>
     </Section>

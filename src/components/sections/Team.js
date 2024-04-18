@@ -65,7 +65,7 @@ justify-content: center;
 `
 
 const Item = styled.div`
-width: calc(20rem - 4vw);
+width: calc(40rem - 4vw);
 padding: 1rem 0;
 color: ${props => props.theme.body};
 margin: 2rem 1rem;
@@ -115,6 +115,7 @@ justify-content: center;
 text-transform: uppercase;
 color: ${props => props.theme.text};
 margin-top: 1rem;
+
 `
 
 const Position = styled.h2`
@@ -125,6 +126,7 @@ justify-content: center;
 text-transform: capitalize;
 color: ${props => `rgba(${props.theme.textRgba},0.9)`};
 font-weight:400;
+padding: 3rem; // Add padding around the text
 `
 
 const MemberComponent = ({img, name=" ",position=" "}) => {
@@ -146,9 +148,9 @@ const Team = () => {
     <Section id="team">
       <Title>Recent Projects</Title>
       <Container>
-        <MemberComponent img={img1} name="Realtime Sora" position="Gamified immersive image generation. Control prompts with keyboard shortcuts. SD Lightning, 15 frames/sec." />
-        <MemberComponent img={img2} name="County Law RAG" position="Legal agent updating a vector database across all local county government websites, including materials published in PDF documents." />
-        <MemberComponent img={img3} name="GPT vs. Gemini" position="An easy way to compare outputs from different models. One message - two answers." />
+      <MemberComponent img={img1} name="Realtime Sora" position="Gamified immersive image generation. Control prompts with keyboard shortcuts. SD Lightning, 15 frames/sec." />
+      <MemberComponent img={img2} name="County Law RAG" position="Legal agent updating a vector database across all local county government websites, including materials published in PDF documents." />
+      <MemberComponent img={img3} name="GPT vs. Gemini" position="An easy way to compare outputs from different models. One message - two answers." />
         <MemberComponent img={img4} name="Your Devin" position="Mistral 0.2 fine-tuned on your codebase directly in VS Code." />
         <MemberComponent img={img5} name="SEMA: arXiv Search Agent" position="Research the latest academic papers using RAG, CoT, Crawler." />
         <MemberComponent img={img6} name="YouTube GPT" position="Summarizes any video into chapters with clickable timestamp links." />

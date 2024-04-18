@@ -97,32 +97,27 @@ useLayoutEffect(() => {
 
     <Container>
 
-<Box>
-  <Accordion ScrollTrigger={ScrollTrigger} title="WHERE CAN I VIEW MY NFTS?" >
-  Once minted or bought simply connect to your OpenSea account to view your NFTs.
-  </Accordion>
-  <Accordion ScrollTrigger={ScrollTrigger} title="WHAT IS THE METAVERSE?" >
-  A metaverse is a network of 3D virtual worlds focused on social connection. In futurism and science fiction, it is often described as a hypothetical iteration of the Internet as a single, universal virtual world that is facilitated by the use of virtual and augmented reality headsets.
-
-  </Accordion>
-  <Accordion ScrollTrigger={ScrollTrigger} title="WHY DO WE NEED ROYALTIES?" >
-  The amount of royalties was fixed at 5% to finance the Weirdos Club's projects. We have the ambition to organize multiple events around the world in order to strengthen the community and build a network of entrepreneurs and investors with the same mindset and common interests.
-  </Accordion>
-</Box>
-<Box>
-<Accordion ScrollTrigger={ScrollTrigger} title="HOW CAN I USE MY NFT?" >
-You will be able to use your NFT as an avatar in the Metaverse and our future video game. Holding also means that you are part of an exclusive network of investors and entrepreneurs.
-  </Accordion>
-  <Accordion ScrollTrigger={ScrollTrigger} title="WHAT ARE THE WEIRDOS?
-" >
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt consequatur quisquam maxime molestias dolores ipsum, exercitationem vel sint quidem aliquam modi quis impedit corporis unde inventore fugiat provident in.
-  </Accordion>
-  <Accordion ScrollTrigger={ScrollTrigger} title="WHAT IS THE FUSION PROCESS?
-" >
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim veritatis iusto officia. Exercitationem, ducimus reiciendis. Rem, maxime, similique neque minus aliquam dolore doloremque laboriosam, facilis quibusdam unde sint officia.
-  </Accordion>
-</Box>
-    </Container>
+        <Box>
+          <Accordion ScrollTrigger={ScrollTrigger} title="HOW TECHNICAL ARE YOU?" >
+            I'm a CS grad, but I've never worked as a SWE. However, I'm very comfortable getting into the weeds of any tech stack: playing with chunking, embeddings, quantization, fine-tuning, changing layers in foundational models, deploying things, building frontend, backend, middleware. Although I'm not a pro in any of this, when there is a big enough business case, I'll figure it out quickly.  </Accordion>
+          <Accordion ScrollTrigger={ScrollTrigger} title="DO YOU HAVE BUSINESS EXPERIENCE?" >
+            Starting a company from scratch, finding the first customers/users, building a team, raising money, and scaling a company are all things I've done before. I've also worked with large companies, such as PepsiCo, Mondelez, Etihad, AB InBev, and PMI, as part of Accenture consulting projects, and have a good understanding of how they operate.
+          </Accordion>
+          <Accordion ScrollTrigger={ScrollTrigger} title="WHAT IS YOUR MAIN WEAKNESS?" >
+            Beeing socially adept
+          </Accordion>
+        </Box>
+        <Box>
+          <Accordion ScrollTrigger={ScrollTrigger} title="ARE YOU LOOKING FOR A TEAM/COFOUNDER" >
+            Yes, but I strongly believe that fewer people in the team is better. I think every new team addition should raise the average. So, I guess I'm looking for someone way better than myself.
+          </Accordion>
+          <Accordion ScrollTrigger={ScrollTrigger} title="WHY ARE YOU DOING STARTUPS?" >
+            I think that's the best way I can do something meaninful.
+          </Accordion>
+          <Accordion ScrollTrigger={ScrollTrigger} title="WHY DO YOU LIVE IN SAN FRANCISCO?" >
+            My observation is that the better the people around, the better person you are. SF has the most diverse culture, great people from all walks of life, arts, psychology, tech, sports, spiritual paths. Also, ocean, bay, forests, climate, city landscape. And the prices well represent it, paying $2k for a room, haha.          </Accordion>
+        </Box>
+      </Container>
     </Section>
   )
 }

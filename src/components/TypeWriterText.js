@@ -71,7 +71,17 @@ const ButtonContainer = styled.div`
   }
 
 `
+
+const calculateDaysSince = () => {
+  const startDate = new Date('September 11, 2023');
+  const currentDate = new Date();
+  const differenceInTime = currentDate.getTime() - startDate.getTime();
+  const differenceInDays = Math.ceil(differenceInTime / (1000 * 3600 * 24));
+  return differenceInDays > 0 ? differenceInDays : 0; // Ensure it doesn't go negative
+};
+
 const TypeWriterText = () => {
+  const daysSinceStart = calculateDaysSince(); // Use the function here
   return (
     <>
         <Title>
@@ -99,11 +109,11 @@ const TypeWriterText = () => {
     </Title>
     <SubTitle>I'm at the intersection of: 
         <br />
-        - engineering (won 3 hackathons in the Bay),
+        - engineering (20 small and medium size products, won 3 hackathons in the Bay),
         <br />
         - the startup world (1 exit, 3 funded startups),
         <br />
-        - vipassana meditation (60d of courses, 215d of practice),
+        - vipassana meditation (60d of courses, ${daysSinceStart}d of practice),
         <br />
         - and sports (4.0 @ pickleball, 7.4m/mi -5mi @ running).
         <br /> <br />

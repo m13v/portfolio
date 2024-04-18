@@ -134,8 +134,59 @@ font-size: ${props => props.theme.fontsm};
     padding: 0.3rem;
 }
 `
+const StyledButton = styled.button`
+  background-color: ${props => props.theme.body}; // Adjust the color to match your theme
+  color: ${props => props.theme.text}; // Adjust the text color to match your theme
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: ${props => props.theme.fontlg}; // Adjust font size as needed
+  padding: 1.5rem 3rem; // Adjust padding as needed
+  border-radius: 50px; // Adjust border-radius as needed
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  display: inline-block; // Ensure it's inline-block to match your JoiNow styled component
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  &:hover::after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    border: 2px solid ${props => props.theme.body}; // Adjust as needed
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    padding: 0.3rem;
+  }
+
+  @media (max-width: 48em) {
+    padding: 1rem 2rem;
+    font-size: ${props => props.theme.fontsm};
+  }
+
+  @media (max-width: 30em) {
+    padding: 0.5rem 2rem;
+  }
+`;
 
 const Banner = () => {
+    const promptToBookmark = () => {
+        console.log('Attempting to add bookmark'); // This should appear in the console when you click the button
+        if (window.sidebar && window.sidebar.addPanel) { // Firefox <=22
+          window.sidebar.addPanel(document.title, window.location.href, '');
+        } else if (window.external && ('AddFavorite' in window.external)) { // IE
+          window.external.AddFavorite(window.location.href, document.title);
+        } else { // WebKit - Safari/Chrome
+          alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') !== -1 ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.');
+        }
+      };
   return (
     <Section>
         <ImgContainer>
@@ -147,12 +198,11 @@ const Banner = () => {
             <img width={500} height={400}  src={img6} alt="The Weirdos" />
 
         </ImgContainer>
-        <Title>Join the  <br /> weirdos club  </Title>
+        <Title>Join me  <br /> on social media  </Title>
         <BtnContainer>
-        <JoiNow href={"/#"} target='_blank'>
-            Join Now
-        </JoiNow>
-
+        <StyledButton onClick={promptToBookmark}>
+          Add to bookmarks
+        </StyledButton>
         </BtnContainer>
     </Section>
   )
