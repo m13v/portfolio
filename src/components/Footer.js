@@ -178,6 +178,8 @@ const Footer = () => {
       <Bottom>
         <span>
           &copy; {new Date().getFullYear()} Personal website. All rights reserved.
+          <br />
+          Life motto: I'm uncomfortable being comfortable
         </span>
       </Bottom>
     </Section>

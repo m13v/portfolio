@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 // import Carousel from '../Carousel'
+import AboutVideo from "../../assets/MyMovie.mp4"; // Import the video file here
 import Button from "../Button";
 import { dark } from "../../styles/Themes";
 import Loading from "../Loading";
@@ -152,7 +153,7 @@ const About = () => {
       <Container>
         <Box>
           <Suspense fallback={<Loading />}>
-            <Carousel />{" "}
+           <video src={AboutVideo} type="video/mp4" autoPlay loop muted style={{ width: '100%', maxHeight: '120vh' }} />
           </Suspense>{" "}
         </Box>
         <Box>

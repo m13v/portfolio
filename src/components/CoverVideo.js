@@ -1,27 +1,131 @@
-import React from 'react'
-import styled from 'styled-components'
-import GIF from '../assets/Home Video.mp4'
-
+import React, { useState, useRef, useEffect } from 'react';
+import styled from 'styled-components';
+import GIF from '../assets/Paparazzi_Video.mp4';
+import TooltipImage from '../assets/cropped-2022.JPG'; // Import the image
 
 const VideoContainer = styled.div`
-width: 100%;
+  width: 100%;
+  display: flex; // Center the video
+  justify-content: center; // Center horizontally
+  align-items: center; // Center vertically
+  position: relative; // Needed to position the button absolutely within the container
 
-video{
-    width: 100%;
-    height: auto;
-}
+  video {
+    width: 100%; // Set video width to 50% of its container
+    height: auto; // Maintain aspect ratio
+  }
 
-@media (max-width: 64em) {
-  min-width: 40vh;
-}
-`
+  button {
+    position: absolute;
+    top: 75%; // Move towards the lower part of the video
+    left: 50%; // Center horizontally
+    transform: translateX(-50%); // Adjust horizontal position to truly center
+    background-color: rgba(255, 255, 255, 0.5); // Semi-transparent background
+    border: none; // Remove border
+    color: #000; // Text color, change as needed
+    padding: 10px; // Significantly increase padding
+    font-size: 1em; // Start with a base font size
+    cursor: pointer; // Cursor indicates clickable
+    border-radius: 10px; // Adjusted for aesthetic
+  }
+  .info-button {
+    position: absolute;
+    top: 10px; // Positioned in the upper part of the video
+    left: 2%; // Positioned in the left part of the video
+    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black background
+    color: white;
+    border: none;
+    --button-size: 10px; // Define a CSS variable for size
+    width: var(--button-size); // Use the variable for width
+    height: var(--button-size); // Use the same variable for height
+    padding: 10px;
+    border-radius: 100%; // Circular button
+    cursor: help; // Indicates an informational element
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Adds shadow for depth
+    display: flex; // Enables the use of Flexbox for centering content
+    justify-content: center; // Centers content horizontally
+    align-items: center; // Centers content vertically
+    text-align: center; // Ensures text is centered if it wraps to a new line
+  }
+
+  .tooltip {
+    visibility: hidden;
+    width: 240px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Add padding around the text */
+    padding: 10px; // Increased padding for the content
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px; // Half of the tooltip's width to center it
+
+    /* Tooltip arrow */
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+    }
+  }
+
+  .info-button:hover .tooltip {
+    visibility: visible;
+  }
+`;
 
 const CoverVideo = () => {
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  const adjustButtonFontSize = () => {
+    if (videoRef.current && buttonRef.current) {
+      const videoWidth = videoRef.current.offsetWidth;
+      const newFontSize = Math.max(16, videoWidth / 20); // Adjust this ratio as needed
+      buttonRef.current.style.fontSize = `${newFontSize}px`;
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', adjustButtonFontSize);
+    // Adjust font size after a delay to ensure video dimensions are loaded
+    setTimeout(adjustButtonFontSize, 500); // A shorter delay might also work
+
+    return () => {
+      window.removeEventListener('resize', adjustButtonFontSize);
+    };
+  }, []);
+
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+    }
+  };
+
   return (
     <VideoContainer>
-        <video src={GIF} type="video/mp4" autoPlay muted loop  />
+      <video ref={videoRef} src={GIF} type="video/mp4" autoPlay loop muted={isMuted} />
+      <button ref={buttonRef} onClick={toggleMute}>{isMuted ? 'Unmute' : 'Mute'}</button>
+      <div className="info-button">
+        i
+        <span className="tooltip">
+          Video was generated from a single picture with DreamTalk diffusion model 
+          <a href="https://arxiv.org/abs/2312.09767v1" target="_blank" rel="noopener noreferrer" style={{ color: 'lightblue' }}> (arXiv))</a>
+          <img src={TooltipImage} alt="DreamTalk Model" style={{ width: '100%', marginTop: '8px' }} />
+        </span>
+      </div>
     </VideoContainer>
-  )
-}
+  );
+};
 
-export default CoverVideo
+export default CoverVideo;

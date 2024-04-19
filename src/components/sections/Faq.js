@@ -99,12 +99,13 @@ useLayoutEffect(() => {
 
         <Box>
           <Accordion ScrollTrigger={ScrollTrigger} title="HOW TECHNICAL ARE YOU?" >
-            I'm a CS grad, but I've never worked as a SWE. However, I'm very comfortable getting into the weeds of any tech stack: playing with chunking, embeddings, quantization, fine-tuning, changing layers in foundational models, deploying things, building frontend, backend, middleware. Although I'm not a pro in any of this, when there is a big enough business case, I'll figure it out quickly.  </Accordion>
+            I'm a CS grad, but I've never worked as a SWE, but I do ship code every day noawadays. I'm very comfortable getting into the weeds of any tech stack: playing with chunking, embeddings, quantization, fine-tuning, changing layers in foundational models, deploying things, building frontend, backend, middleware. Although I'm not a pro in any of this, when there is a big enough business case, I'll figure it out quickly.
+          </Accordion>
           <Accordion ScrollTrigger={ScrollTrigger} title="DO YOU HAVE BUSINESS EXPERIENCE?" >
             Starting a company from scratch, finding the first customers/users, building a team, raising money, and scaling a company are all things I've done before. I've also worked with large companies, such as PepsiCo, Mondelez, Etihad, AB InBev, and PMI, as part of Accenture consulting projects, and have a good understanding of how they operate.
           </Accordion>
           <Accordion ScrollTrigger={ScrollTrigger} title="WHAT IS YOUR MAIN WEAKNESS?" >
-            Beeing socially adept
+            Socially inept. Also, natural languages are harder for me than technical ones.
           </Accordion>
         </Box>
         <Box>
