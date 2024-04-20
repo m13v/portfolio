@@ -99,34 +99,32 @@ img{
 `
 
 const Details = styled.div`
-display: flex;
-justify-content: space-between;
-padding: 0.8rem 1rem;
-background-color: ${props => props.theme.text};
-border: 2px solid ${props => `rgba(${props.theme.bodyRgba},0.5)`};
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  background-color: ${props => props.theme.text};
+  border: 2px solid ${props => `rgba(${props.theme.bodyRgba},0.5)`};
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
-border-bottom-left-radius: 20px;
-border-bottom-right-radius: 20px;
-
-span{
-  font-size: ${props => props.theme.fontsm};
-  color:${props => `rgba(${props.theme.bodyRgba},0.5)`};
-  font-weight:600;
-  line-height: 1.5rem;
-}
-
-h1{
-  font-size: ${props => props.theme.fontmd};
-  color: ${props => props.theme.body};
-  font-weight:600;
-
-  @media (max-width: 30em){
+  span {
     font-size: ${props => props.theme.fontsm};
-
+    color: ${props => `rgba(${props.theme.bodyRgba},0.5)`};
+    font-weight: 600;
+    line-height: 1.5rem;
+    white-space: normal; // Allows the text to wrap
+    overflow-wrap: break-word; // Ensures long words do not overflow
   }
 
-}
+  h1 {
+    font-size: ${props => props.theme.fontmd};
+    color: ${props => props.theme.body};
+    font-weight: 600;
 
+    @media (max-width: 30em) {
+      font-size: ${props => props.theme.fontsm};
+    }
+  }
 `
 
 const Price = styled.div`

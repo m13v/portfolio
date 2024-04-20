@@ -159,11 +159,12 @@ const About = () => {
               autoPlay
               loop
               muted
+              playsInline  // Ensures inline playback on mobile devices
               style={{
                 width: '100%',
-                height: '120vh', // Increase height as needed
-                objectFit: 'cover', // Cover the container
-                objectPosition: 'center' // Adjust this as needed to focus on a part of the video
+                height: '120vh',
+                objectFit: 'cover',
+                objectPosition: 'center'
               }}
             />
           </Suspense>{" "}
