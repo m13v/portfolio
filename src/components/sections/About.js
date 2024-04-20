@@ -1,10 +1,11 @@
-import React, { lazy, Suspense, useState } from "react";
+import React, { lazy, Suspense, useState, useRef, useEffect  } from "react";
 import styled, { ThemeProvider } from "styled-components";
 // import Carousel from '../Carousel'
 import AboutVideo from "../../assets/MyMovie.mp4"; // Import the video file here
 import Button from "../Button";
 import { dark } from "../../styles/Themes";
 import Loading from "../Loading";
+import TooltipImage from '../../assets/105.jpg'; // Import the image
 
 const Carousel = lazy(() => import("../Carousel"));
 
@@ -146,8 +147,105 @@ const InlineButton = styled.button`
   font-size: inherit; /* Optional: ensures the button font size matches surrounding text */
 `;
 
+const InfoButton = styled.div`
+  position: absolute;
+  top: 10px; // Positioned in the upper part of the video
+  left: 2%; // Positioned in the left part of the video
+  background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black background
+  color: white;
+  border: none;
+  --button-size: 10px; // Define a CSS variable for size
+  width: var(--button-size); // Use the variable for width
+  height: var(--button-size); // Use the same variable for height
+  padding: 10px;
+  border-radius: 100%; // Circular button
+  cursor: help; // Indicates an informational element
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Adds shadow for depth
+  display: flex; // Enables the use of Flexbox for centering content
+  justify-content: center; // Centers content horizontally
+  align-items: center; // Centers content vertically
+  text-align: center; // Ensures text is centered if it wraps to a new line
+`;
+
+const Tooltip = styled.span`
+  visibility: hidden;
+  position: absolute;
+  bottom: 100%; // Adjust based on your design
+  left: 0; // Tooltip appears from the bottom right of the button
+  transform: translateY(10px); // Creates a small gap between the button and tooltip
+  width: 200px; // Adjust as needed
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  z-index: 1;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 10px; // Arrow appears near the right edge of the tooltip
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+
+  ${InfoButton}:hover & {
+    visibility: visible;
+  }
+`;
+
+
+
 const About = () => {
+  const infoButtonRef = useRef(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  useEffect(() => {
+    const infoButton = infoButtonRef.current;
+  
+    const handleMouseOver = () => {
+      const tooltip = infoButton.querySelector('.tooltip');
+      if (!tooltip) return;
+  
+      // Calculate if there's enough space below the info button for the tooltip
+      const infoButtonRect = infoButton.getBoundingClientRect();
+      const tooltipHeight = tooltip.offsetHeight;
+      const spaceBelow = window.innerHeight - infoButtonRect.bottom;
+  
+      if (spaceBelow < tooltipHeight) {
+        // Not enough space below, show tooltip above
+        tooltip.style.bottom = '100%';
+        tooltip.style.top = 'auto';
+      } else {
+        // Enough space below, show tooltip below
+        tooltip.style.top = '100%';
+        tooltip.style.bottom = 'auto';
+      }
+    };
+  
+    const handleMouseOut = () => {
+      const tooltip = infoButton.querySelector('.tooltip');
+      if (tooltip) {
+        // Reset tooltip position to default or hide it
+        tooltip.style.bottom = 'auto';
+        tooltip.style.top = 'auto';
+      }
+    };
+  
+    if (infoButton) {
+      infoButton.addEventListener('mouseover', handleMouseOver);
+      infoButton.addEventListener('mouseout', handleMouseOut);
+    }
+  
+    return () => {
+      if (infoButton) {
+        infoButton.removeEventListener('mouseover', handleMouseOver);
+        infoButton.removeEventListener('mouseout', handleMouseOut);
+      }
+    };
+  }, []);
   return (
     <Section id="about">
       <Container>
@@ -168,6 +266,16 @@ const About = () => {
               }}
             />
           </Suspense>{" "}
+          <InfoButton ref={infoButtonRef}>
+            i
+            <Tooltip className="tooltip">
+              Video was generated from a single picture with Stable Video Diffusion.
+              <a href="https://stability.ai/news/stable-video-diffusion-open-ai-video-model" target="_blank" rel="noopener noreferrer" style={{ color: 'lightblue' }}>
+                (stability.ai)
+              </a>
+              <img src={TooltipImage} alt="Stable Video Diffusion" style={{ width: '100%', marginTop: '8px' }} />
+            </Tooltip>
+          </InfoButton>
         </Box>
         <Box>
           <Title>

@@ -106,6 +106,7 @@ text-transform: capitalize;
 color: ${props => `rgba(${props.theme.textRgba},0.9)`};
 font-weight:400;
 padding-top: 1rem; // Add padding around the text
+padding-bottom: 1rem; // Add padding around the text
 `
 
 
@@ -138,11 +139,11 @@ const MicrolinkWrapper = styled.div`
 const MemberComponent = ({ link, name, position }) => {
   return (
     <Item>
+      <Name>{name}</Name>
+      <Position>{position}</Position>
       <MicrolinkWrapper>
         <Microlink url={link} size="large" />
       </MicrolinkWrapper>
-      <Name>{name}</Name>
-      <Position>{position}</Position>
     </Item>
   );
 };
