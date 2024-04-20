@@ -45,7 +45,7 @@ const Container = styled.div`
   }
 `;
 const Box = styled.div`
-  width: 50%;
+  width: 100%;
   height: 100%;
   min-height: 60vh;
   display: flex;
@@ -153,7 +153,19 @@ const About = () => {
       <Container>
         <Box>
           <Suspense fallback={<Loading />}>
-           <video src={AboutVideo} type="video/mp4" autoPlay loop muted style={{ width: '100%', maxHeight: '120vh' }} />
+            <video
+              src={AboutVideo}
+              type="video/mp4"
+              autoPlay
+              loop
+              muted
+              style={{
+                width: '100%',
+                height: '120vh', // Increase height as needed
+                objectFit: 'cover', // Cover the container
+                objectPosition: 'center' // Adjust this as needed to focus on a part of the video
+              }}
+            />
           </Suspense>{" "}
         </Box>
         <Box>
@@ -194,7 +206,7 @@ const About = () => {
             <ThemeProvider theme={dark}>
               <Button
                 text="If any of this clicks with you, send me an email. Happy to connect!"
-                link="i@m13v.com"
+                link="mailto:i@m13v.com"
                 newTab={true}
               />
             </ThemeProvider>
@@ -206,3 +218,4 @@ const About = () => {
 };
 
 export default About;
+

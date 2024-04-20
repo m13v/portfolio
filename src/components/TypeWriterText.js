@@ -85,7 +85,7 @@ const TypeWriterText = () => {
   return (
     <>
         <Title>
-      From Curiosity to Creation
+      Yet another tech bro?
       <Typewriter
         options={{
           autoStart: true,
@@ -113,9 +113,9 @@ const TypeWriterText = () => {
         <br />
         - the startup world (1 exit, 3 funded startups),
         <br />
-        - vipassana meditation (60d of courses, ${daysSinceStart}d of practice),
+        - vipassana meditation (60d of courses, {daysSinceStart}d of practice),
         <br />
-        - and sports (4.0 @ pickleball, 7.4m/mi -5mi @ running).
+        - and sports (4.0 @ pickleball, 7.4m/mi in 5mi @ running).
         <br /> <br />
         Right now, I have the bandwidth to work on a new project, either something open-source, or a potential startup.
         <br /> <br />

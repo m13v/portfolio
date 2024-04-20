@@ -72,13 +72,14 @@ const Faq = () => {
 
 const ref = useRef(null);
 gsap.registerPlugin(ScrollTrigger);
+
 useLayoutEffect(() => {
-  
+  let prevSectionHeight = document.getElementById('team').offsetHeight; // Get dynamic height of the Team section
   let element = ref.current;
 
   ScrollTrigger.create({
     trigger: element,
-    start:'bottom bottom',
+    start: `top+=${prevSectionHeight} bottom`, // Adjust start point based on the Team section's height
     end:'bottom top',
     pin:true,   
     pinSpacing:false, 

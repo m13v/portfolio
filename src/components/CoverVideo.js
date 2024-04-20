@@ -86,6 +86,7 @@ const CoverVideo = () => {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
   const buttonRef = useRef(null);
+  const infoButtonRef = useRef(null); // Add a ref for the info button
 
   const adjustButtonFontSize = () => {
     if (videoRef.current && buttonRef.current) {
@@ -105,6 +106,51 @@ const CoverVideo = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const infoButton = infoButtonRef.current;
+
+    const handleMouseOver = () => {
+      const tooltip = infoButton.querySelector('.tooltip');
+      if (!tooltip) return;
+
+      // Calculate if there's enough space below the info button for the tooltip
+      const infoButtonRect = infoButton.getBoundingClientRect();
+      const tooltipHeight = tooltip.offsetHeight;
+      const spaceBelow = window.innerHeight - infoButtonRect.bottom;
+
+      if (spaceBelow < tooltipHeight) {
+        // Not enough space below, show tooltip above
+        tooltip.style.bottom = '100%';
+        tooltip.style.top = 'auto';
+      } else {
+        // Enough space below, show tooltip below
+        tooltip.style.top = '100%';
+        tooltip.style.bottom = 'auto';
+      }
+    };
+
+    const handleMouseOut = () => {
+      const tooltip = infoButton.querySelector('.tooltip');
+      if (tooltip) {
+        // Reset tooltip position to default or hide it
+        tooltip.style.bottom = 'auto';
+        tooltip.style.top = 'auto';
+      }
+    };
+
+    if (infoButton) {
+      infoButton.addEventListener('mouseover', handleMouseOver);
+      infoButton.addEventListener('mouseout', handleMouseOut);
+    }
+
+    return () => {
+      if (infoButton) {
+        infoButton.removeEventListener('mouseover', handleMouseOver);
+        infoButton.removeEventListener('mouseout', handleMouseOut);
+      }
+    };
+  }, []);
+
   const toggleMute = () => {
     setIsMuted(!isMuted);
     if (videoRef.current) {
@@ -116,14 +162,16 @@ const CoverVideo = () => {
     <VideoContainer>
       <video ref={videoRef} src={GIF} type="video/mp4" autoPlay loop muted={isMuted} />
       <button ref={buttonRef} onClick={toggleMute}>{isMuted ? 'Unmute' : 'Mute'}</button>
-      <div className="info-button">
-        i
-        <span className="tooltip">
-          Video was generated from a single picture with DreamTalk diffusion model 
-          <a href="https://arxiv.org/abs/2312.09767v1" target="_blank" rel="noopener noreferrer" style={{ color: 'lightblue' }}> (arXiv))</a>
-          <img src={TooltipImage} alt="DreamTalk Model" style={{ width: '100%', marginTop: '8px' }} />
-        </span>
-      </div>
+      <a href="https://arxiv.org/abs/2312.09767v1" target="_blank" rel="noopener noreferrer">
+        <div className="info-button" ref={infoButtonRef}>
+          i
+          <span className="tooltip">
+            Video was generated from a single picture with DreamTalk diffusion model 
+            <a href="https://arxiv.org/abs/2312.09767v1" target="_blank" rel="noopener noreferrer" style={{ color: 'lightblue' }}> (arXiv))</a>
+            <img src={TooltipImage} alt="DreamTalk Model" style={{ width: '100%', marginTop: '8px' }} />
+          </span>
+        </div>
+      </a>
     </VideoContainer>
   );
 };
