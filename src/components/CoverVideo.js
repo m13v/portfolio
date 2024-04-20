@@ -160,8 +160,16 @@ const CoverVideo = () => {
 
   return (
     <VideoContainer>
-      <video ref={videoRef} src={GIF} type="video/mp4" autoPlay loop muted={isMuted} />
-      <button ref={buttonRef} onClick={toggleMute}>{isMuted ? 'Unmute' : 'Mute'}</button>
+      <video
+        ref={videoRef}
+        src={GIF}
+        type="video/mp4"
+        autoPlay
+        loop
+        muted={isMuted}
+        playsInline // Ensure this attribute is included for mobile devices
+      />
+        <button ref={buttonRef} onClick={toggleMute}>{isMuted ? 'Unmute' : 'Mute'}</button>
       <a href="https://arxiv.org/abs/2312.09767v1" target="_blank" rel="noopener noreferrer">
         <div className="info-button" ref={infoButtonRef}>
           i
