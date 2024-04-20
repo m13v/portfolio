@@ -315,7 +315,7 @@ const About = () => {
             <ThemeProvider theme={dark}>
               <Button
                 text="If any of this clicks with you, send me an email. Happy to connect!"
-                link="mailto:i@m13v.com"
+                link="mailto:matthew.ddy@gmail.com"
                 newTab={true}
               />
             </ThemeProvider>
