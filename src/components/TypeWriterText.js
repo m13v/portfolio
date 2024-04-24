@@ -46,10 +46,27 @@ const SubTitle = styled.h3`
   margin-bottom: 1rem;
   width: 80%;
   align-self: flex-start;
-  text-align: left;
+  text-align: justify; // Apply justified alignment to the entire subtitle
+
+  ul {
+    list-style-position: outside; // Ensures bullets are outside the text block
+    padding-left: 20px; // Adjust as needed for alignment
+    margin-left: 0; // Adjust to align with the rest of the content
+    text-align: justify; // Apply justified alignment to the entire subtitle
+}
+
+  li {
+    margin-top: 0.5rem;
+    text-align: justify; // Apply justified alignment to the entire subtitle
+  }
 
   @media (max-width: 40em) {
     font-size: ${(props) => props.theme.fontmd};
+    text-align: center;
+    ul {
+      list-style-type: none; // Optionally remove bullets on smaller screens
+      padding-left: 0;
+    }
   }
 
   @media (max-width: 48em) {
@@ -67,6 +84,7 @@ const ButtonContainer = styled.div`
 
     button{
       margin: 0 auto;
+      padding-bottom: 10px; // Add padding under the button
     }
   }
 
@@ -107,20 +125,19 @@ const TypeWriterText = () => {
       />
       
     </Title>
-    <SubTitle>I'm at the intersection of: 
+      <SubTitle>
+        I'm at the intersection of:
+        <ul>
+          <li>engineering (20 products, won 3 hackathons in the Bay),</li>
+          <li>startups (1 exit, 3 funded startups),</li>
+          <li>vipassana meditation (60d of courses, {daysSinceStart}d of practice),</li>
+          <li>sports (4.0 @ pickleball, 7.4m/mi in 5mi @ running).</li>
+        </ul>
         <br />
-        - engineering (20 small and medium size products, won 3 hackathons in the Bay),
-        <br />
-        - the startup world (1 exit, 3 funded startups),
-        <br />
-        - vipassana meditation (60d of courses, {daysSinceStart}d of practice),
-        <br />
-        - and sports (4.0 @ pickleball, 7.4m/mi in 5mi @ running).
-        <br /> <br />
         Right now, I have the bandwidth to work on a new project, either something open-source, or a potential startup.
         <br /> <br />
         Single, no kids 😢
-    </SubTitle>
+      </SubTitle>
     <ButtonContainer>
     <Button text="Jump to tech stuff" link="#team" />
     </ButtonContainer>

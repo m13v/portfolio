@@ -45,73 +45,33 @@ justify-content: center;
 }
 `
 
-// const Item = styled.div`
-// width: calc(40rem - 4vw);
-// padding: 1rem 0;
-// color: ${props => props.theme.body};
-// margin: 2rem 1rem;
-// position: relative;
-// z-index:5;
+const Name = styled.a`  // Changed from styled.h2 to styled.a
+  font-size: ${props => props.theme.fontlg};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: ${props => props.theme.text};
+  margin-top: 1rem;
+  cursor: pointer;
+`;
 
-// backdrop-filter: blur(4px);
-
-// border: 2px solid ${props => props.theme.text};
-// border-radius: 20px;
-
-// &:hover{
-//   transform: scale(1.05);
-// }
-
-// @media (max-width: 30em){
-// width: 70vw;
-// }
-
-// `
-
-// const ImageContainer = styled.div`
-// width: 80%;
-// margin: 0 auto;
-// background-color:${props => props.theme.carouselColor};
-// border: 1px solid ${props => props.theme.text};
-// padding: 1rem;
-
-// border-radius: 20px;
-// cursor: pointer;
-
-// img{
-//   width: 100%;
-//   height: auto;
-// transition: all 0.3s ease;
-
-// }
-// `
-
-const Name = styled.h2`
-font-size: ${props => props.theme.fontlg};
-display: flex;
-align-items: center;
-justify-content: center;
-text-transform: uppercase;
-color: ${props => props.theme.text};
-margin-top: 1rem;
-
-`
-
-const Position = styled.h2`
-font-size: ${props => props.theme.fontmd};
-display: flex;
-align-items: center;
-justify-content: center;
-text-transform: capitalize;
-color: ${props => `rgba(${props.theme.textRgba},0.9)`};
-font-weight:400;
-padding-top: 1rem; // Add padding around the text
-padding-bottom: 1rem; // Add padding around the text
-`
+const Position = styled.a`  // Changed from styled.h2 to styled.a
+  font-size: ${props => props.theme.fontmd};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  color: ${props => `rgba(${props.theme.textRgba},0.9)`};
+  font-weight: 400;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  cursor: pointer;  // Added cursor style
+`;
 
 
 const Item = styled.div`
-  width: calc(40rem - 4vw);
+  width: calc(32rem - 4vw);
   max-width: 100%; // Ensure it doesn't overflow its parent container
   padding: 1rem;
   color: ${props => props.theme.body};
@@ -131,16 +91,24 @@ const Item = styled.div`
 
 const MicrolinkWrapper = styled.div`
   width: 100%;
+  height: 500px; // Set a fixed height
+  overflow: hidden; // Prevents content from overflowing
+
   iframe {
     width: 100% !important;
-  }
+    height: 600px !important; // Set the actual height of the iframe to double
+    transform: translateY(-20%); // Adjust vertical position to center the content
+    border: none; // Remove any default border
+    padding: 0; // Remove any default padding
+    margin: 0; // Ensure the iframe has no margin
+    }
 `;
 
 const MemberComponent = ({ link, name, position }) => {
   return (
     <Item>
-      <Name>{name}</Name>
-      <Position>{position}</Position>
+      <Name href={link} target="_blank">{name}</Name>  
+      <Position href={link} target="_blank">{position}</Position>  
       <MicrolinkWrapper>
         <Microlink url={link} size="large" />
       </MicrolinkWrapper>

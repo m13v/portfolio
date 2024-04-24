@@ -53,6 +53,7 @@ const Box = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative; // Make sure this is here
 
   @media (max-width: 40em) {
     min-height: 50vh;
