@@ -92,7 +92,7 @@ const HamburgerMenu = styled.span`
 
   position: absolute;
   top: 2rem;
-  left: 50%;
+  right: 1rem;  // Changed from left: 50% to right: 1rem
   transform: ${(props) =>
     props.click
       ? "translateX(-50%) rotate(90deg)"
@@ -148,9 +148,9 @@ const Navigation = () => {
     <Section id="navigation">
       <NavBar>
         <Logo />
-        {/* <HamburgerMenu click={+click} onClick={() => setClick(!click)}>
+        <HamburgerMenu click={+click} onClick={() => setClick(!click)}>
           &nbsp;
-        </HamburgerMenu> */}
+        </HamburgerMenu>
         <Menu click={+click}>
           <MenuItem onClick={() => scrollTo("home")}>Home</MenuItem>
           <MenuItem onClick={() => scrollTo("about")}>Story</MenuItem>

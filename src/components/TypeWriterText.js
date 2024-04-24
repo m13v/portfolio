@@ -84,7 +84,6 @@ const ButtonContainer = styled.div`
 
     button{
       margin: 0 auto;
-      padding-bottom: 10px; // Add padding under the button
     }
   }
 

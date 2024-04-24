@@ -54,6 +54,9 @@ const Name = styled.a`  // Changed from styled.h2 to styled.a
   color: ${props => props.theme.text};
   margin-top: 1rem;
   cursor: pointer;
+  &:hover {
+    text-decoration: underline;  // Add underline on hover
+  }
 `;
 
 const Position = styled.a`  // Changed from styled.h2 to styled.a
@@ -67,12 +70,16 @@ const Position = styled.a`  // Changed from styled.h2 to styled.a
   padding-top: 1rem;
   padding-bottom: 1rem;
   cursor: pointer;  // Added cursor style
+  &:hover {
+    text-decoration: underline;  // Add underline on hover
+  }
 `;
 
 
 const Item = styled.div`
   width: calc(32rem - 4vw);
-  max-width: 100%; // Ensure it doesn't overflow its parent container
+  max-width: 80%; // Ensure it doesn't overflow its parent container
+  height: calc(32rem - 4vw);
   padding: 1rem;
   color: ${props => props.theme.body};
   margin: 2rem 1rem;
@@ -91,7 +98,7 @@ const Item = styled.div`
 
 const MicrolinkWrapper = styled.div`
   width: 100%;
-  height: 500px; // Set a fixed height
+  height: 100%; // Set a fixed height
   overflow: hidden; // Prevents content from overflowing
 
   iframe {

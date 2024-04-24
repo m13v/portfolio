@@ -106,6 +106,7 @@ const Details = styled.div`
   border: 2px solid ${props => `rgba(${props.theme.bodyRgba},0.5)`};
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  min-height: 4rem;  // Set a minimum height to ensure uniformity
 
   span {
     font-size: ${props => props.theme.fontsm};
@@ -182,21 +183,21 @@ const Showcase = () => {
         <NftItem img={img6} number={452} price={4.7} passRef={Row1Ref} firstName="Alex" lastName="Boldyrev" />
       </Row>
       <Row direction="reverse" ref={Row2Ref}>
-        <NftItem img={img6} number={888} price={1.2} passRef={Row2Ref} firstName="Elizaveta" lastName="Litvinova" />
+        <NftItem img={img4} number={888} price={1.2} passRef={Row2Ref} firstName="Elizaveta" lastName="Litvinova" />
         <NftItem img={img7} number={211} price={3.2} passRef={Row2Ref} firstName="Max" lastName="Irisov" />
         <NftItem img={img8} number={455} price={1.8} passRef={Row2Ref} firstName="Raffaella" lastName="Campagnoli" />
         <NftItem img={img9} number={456} price={5.1} passRef={Row2Ref} firstName="William" lastName="Durst" />
       </Row>
       <Row direction="reverse" ref={Row3Ref}>
         <NftItem img={img6} number={452} price={4.7} passRef={Row1Ref} firstName="Alex" lastName="Reshetnikov" />
-        <NftItem img={img6} number={888} price={1.2} passRef={Row2Ref} firstName="Alex" lastName="Kravcov" />
+        <NftItem img={img2} number={888} price={1.2} passRef={Row2Ref} firstName="Alex" lastName="Kravcov" />
         <NftItem img={img7} number={211} price={3.2} passRef={Row2Ref} firstName="Yury" lastName="Kudryakov" />
         <NftItem img={img8} number={455} price={1.8} passRef={Row2Ref} firstName="Veronika" lastName="Aksenova" />
         <NftItem img={img9} number={456} price={5.1} passRef={Row2Ref} firstName="Ilya" lastName="Mehedkin" />
       </Row>
       <Row direction="reverse" ref={Row4Ref}>
-        <NftItem img={img6} number={452} price={4.7} passRef={Row1Ref} firstName="Nolan" lastName="Holden" />
-        <NftItem img={img6} number={888} price={1.2} passRef={Row2Ref} firstName="Kate" lastName="" />
+        <NftItem img={img3} number={452} price={4.7} passRef={Row1Ref} firstName="Nolan" lastName="Holden" />
+        <NftItem img={img4} number={888} price={1.2} passRef={Row2Ref} firstName="Kate" lastName="" />
         <NftItem img={img7} number={211} price={3.2} passRef={Row2Ref} firstName="Bruce" lastName="Dockter" />
       </Row>
     </Section>
