@@ -10,14 +10,14 @@ import TooltipImage from '../../assets/105.jpg'; // Import the image
 const Carousel = lazy(() => import("../Carousel"));
 
 const Section = styled.section`
-  min-height: 100vh;
-  width: 100%;
-  background-color: ${(props) => props.theme.text};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh; // Minimum height of 100% of the viewport height
+  width: 100%; // Width set to 100% of the parent container
+  background-color: ${(props) => props.theme.text}; // Background color taken from theme
+  display: flex; // Use flexbox for layout
+  justify-content: center; // Horizontally center the content
+  align-items: center; // Vertically center the content
+  position: relative; // Position relative for positioning child elements absolutely within
+  overflow: hidden; // Hide any content that overflows the container
 `;
 const Container = styled.div`
   width: 75%;
