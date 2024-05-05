@@ -317,11 +317,11 @@ const About = () => {
               <Button
                 text="If any of this clicks with you, send me an email. Happy to connect!"
                 link="mailto:i@m13v.com"
-                newTab={true}
-              />
-            </ThemeProvider>
-          </ButtonContainer>
-        </Box>
+                newTab={true} // Opens the link in a new tab
+                />
+              </ThemeProvider> {/* Applies the 'dark' theme to components within */}
+            </ButtonContainer> {/* Container for the button, styled for layout */}
+          </Box>
       </Container>
     </Section>
   );
