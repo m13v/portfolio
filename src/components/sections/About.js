@@ -201,14 +201,15 @@ const Tooltip = styled.span`
 
 
 const About = () => {
-  const infoButtonRef = useRef(null);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const infoButtonRef = useRef(null); // Reference to the info button element
+  const [isExpanded, setIsExpanded] = useState(false); // State to manage the expansion of text
+
   useEffect(() => {
-    const infoButton = infoButtonRef.current;
+    const infoButton = infoButtonRef.current; // Access the current reference to the info button
   
     const handleMouseOver = () => {
-      const tooltip = infoButton.querySelector('.tooltip');
-      if (!tooltip) return;
+      const tooltip = infoButton.querySelector('.tooltip'); // Select the tooltip element within the info button
+      if (!tooltip) return; // If no tooltip is found, exit the function
   
       // Calculate if there's enough space below the info button for the tooltip
       const infoButtonRect = infoButton.getBoundingClientRect();
