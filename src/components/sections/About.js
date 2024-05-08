@@ -217,11 +217,11 @@ const About = () => {
       const spaceBelow = window.innerHeight - infoButtonRect.bottom;
   
       if (spaceBelow < tooltipHeight) {
-        // Not enough space below, show tooltip above
+        // Not enough space below, show tooltip above the button
         tooltip.style.bottom = '100%';
         tooltip.style.top = 'auto';
       } else {
-        // Enough space below, show tooltip below
+        // Enough space below, show tooltip below the button
         tooltip.style.top = '100%';
         tooltip.style.bottom = 'auto';
       }
