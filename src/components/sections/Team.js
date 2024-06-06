@@ -129,6 +129,7 @@ const Team = () => {
     <Section id="team">
       <Title>Recent Projects</Title>
       <Container>
+        <MemberComponent link="https://www.linkedin.com/posts/matthew-diakonov-a84a1911_just-launched-an-autodebugger-a-typical-activity-7204346521654366208-4Iye?utm_source=share&utm_medium=member_desktop" name="GPT Auto Debugger" position="Coding assistant that actually test runs the code in a safe sandbox environment." />
         <MemberComponent link="https://www.linkedin.com/posts/matthew-diakonov-a84a1911_new-cli-interface-for-httpslnkdingsnrwjf-activity-7194409697230168066-l95n?utm_source=share&utm_medium=member_desktop" name="Gemini 4 Docs" position="Search and chat with any documentation inside your terminal." />
         <MemberComponent link="https://www.linkedin.com/posts/matthew-diakonov-a84a1911_played-with-sd-lightning-voice2img-its-activity-7186174839504748544-8tAI?utm_source=share&utm_medium=member_desktop" name="Realtime Sora" position="Gamified immersive image generation. Control prompts with keyboard shortcuts. SD Lightning, 15 frames/sec." />
         <MemberComponent link="https://www.linkedin.com/posts/matthew-diakonov-a84a1911_i-developed-a-legal-agent-that-updates-a-activity-7183693606816243712-EcSe?utm_source=share&utm_medium=member_desktop" name="County Law RAG" position="Legal agent updating a vector database across all local county government websites, including materials published in PDF documents." />
