@@ -100,24 +100,23 @@ useLayoutEffect(() => {
 
         <Box>
           <Accordion ScrollTrigger={ScrollTrigger} title="HOW TECHNICAL ARE YOU?" >
-            I'm a CS grad, but I've never worked as a SWE, but I do ship code every day noawadays. I'm very comfortable getting into the weeds of any tech stack: playing with chunking, embeddings, quantization, fine-tuning, changing layers in foundational models, deploying things, building frontend, backend, middleware. Although I'm not a pro in any of this, when there is a big enough business case, I'll figure it out quickly.
-          </Accordion>
+            I'm a CS grad, but I've never worked as a SWE. However, I do ship code every day nowadays. I'm very comfortable getting into the weeds of any tech stack: playing with chunking, embeddings, quantization, fine-tuning, changing layers in foundational models, deploying things, building frontend, backend, and middleware. Although I'm not a pro in any of this, when there is a big enough business case, I'll figure it out quickly.          </Accordion>
           <Accordion ScrollTrigger={ScrollTrigger} title="DO YOU HAVE BUSINESS EXPERIENCE?" >
-            Starting a company from scratch, finding the first customers/users, building a team, raising money, and scaling a company are all things I've done before. I've also worked with large companies, such as PepsiCo, Mondelez, Etihad, AB InBev, and PMI, as part of Accenture consulting projects, and have a good understanding of how they operate.
-          </Accordion>
+            Starting a company from scratch, finding the first customers/users, building a team, raising money, and scaling a company are all things I've done before. I've also worked with large companies such as PepsiCo, Mondelez, Etihad, AB InBev, and PMI as part of Accenture consulting projects, and I have a good understanding of how they operate.          </Accordion>
           <Accordion ScrollTrigger={ScrollTrigger} title="WHAT IS YOUR MAIN WEAKNESS?" >
-            Socially inept. Also, natural languages are harder for me than technical ones.
+            Socially inept, and natural languages are harder for me than technical ones.
           </Accordion>
         </Box>
         <Box>
           <Accordion ScrollTrigger={ScrollTrigger} title="ARE YOU LOOKING FOR A TEAM/COFOUNDER" >
-            Yes, but I strongly believe that fewer people in the team is better. I think every new team addition should raise the average. So, I guess I'm looking for someone way better than myself.
+            Yes, but I strongly believe that fewer people on the team is better. I think every new team addition should raise the average. So, I guess I'm looking for someone way better than myself.
           </Accordion>
           <Accordion ScrollTrigger={ScrollTrigger} title="WHY ARE YOU DOING STARTUPS?" >
-            I think that's the best way I can do something meaninful.
+            I think that's the best way I can do something meaningful.
           </Accordion>
           <Accordion ScrollTrigger={ScrollTrigger} title="WHY DO YOU LIVE IN SAN FRANCISCO?" >
-            My observation is that the better the people around, the better person you are. SF has the most diverse culture, great people from all walks of life, arts, psychology, tech, sports, spiritual paths. Also, ocean, bay, forests, climate, city landscape. And the prices well represent it, paying $2k for a room, haha.          </Accordion>
+            My observation is that the better the people around you, the better person you become. SF has the most diverse culture, with great people from all walks of life, including arts, psychology, tech, sports, and spiritual paths. Also, the ocean, bay, forests, climate, and city landscape are amazing. And the prices well represent it, paying $2k for a room, haha.
+          </Accordion>
         </Box>
       </Container>
     </Section>

@@ -268,7 +268,7 @@ const Roadmap = () => {
                 <br /><br />
                 I started selling the CDs to my classmates at school. At first, it seemed like a brilliant plan, but I soon realized the risks involved. Not only was I jeopardizing my friendships, but I also faced the possibility of getting expelled if caught. It was a tough lesson to learn.
                 <br /><br />
-                In the end, I almost got kicked out of school. The principal shut down my lucrative business, but not before I had saved up enough money to buy my own computer. It was a bittersweet moment - the end of my first entrepreneurial experience, but the beginning of a new chapter in my life. Looking back, I'm grateful for learning the basic fundemental skills: how to make money by turning ideas into real projects.              
+                In the end, I almost got kicked out of school. The principal shut down my lucrative business, but not before I had saved up enough money to buy my own computer. It was a bittersweet moment—the end of my first entrepreneurial experience, but the beginning of a new chapter in my life. Looking back, I'm grateful for learning the basic fundamental skills: how to make money by turning ideas into real projects.              
               </>
             }
           />
@@ -277,7 +277,7 @@ const Roadmap = () => {
             title="First Software Experience (2004)"
             subtext={
               <>
-                Back in the day, software development wasn't something you could image you could do yourself.
+                Back in the day, software development wasn't something you could imagine doing yourself.
                 <br /><br />
                 It was mostly perceived as something big companies did, like Microsoft, Google, or Yandex in Russia. Luckily, my school
                 </>}subtext2={<>
@@ -300,7 +300,9 @@ const Roadmap = () => {
               <>
                 This might sound counterintuitive, but my first job was actually at McDonald's. And it wasn't by accident.
                 <br /><br />
-                I remember that day very clearly when I came back from summer vacation, having just turned 16. </>}subtext2={<> My older brother Andrey sat with me to have a profound discussion about my future, as college was approaching. I'm so glad we had that conversation, and I still remember his words as if he said them now.
+                I remember that day very clearly when I came back from summer vacation, having just turned 16.
+              </>}subtext2={<> 
+                My older brother Andrey sat with me to have a profound discussion about my future, as college was approaching. I'm so glad we had that conversation, and I still remember his words as if he said them now.
                 <br /><br />
                 What really struck me was when he said, "You know, you're a smart kid, but you're not street smart. You need to learn how to deal with people, work hard, and make money. You need to get a job."
                 <br /><br />
@@ -319,9 +321,9 @@ const Roadmap = () => {
                 <br /><br />
                 Funny story and a big lesson: my colleague Alexander and I hacked the bank bonus system, in a legal way. Back then, every rep would be rewarded for how many approved loan applications they brought in, not for the actual loans given out. So, we created a small project where we would run a pre-approval process for loans and get a commission for every approved loan, even though not every customer would end up getting one. We basically went around the bank's corporate clients and asked employees if they wanted to know how much of a loan they could get. We had an insane number of applications to process, to the extent that we hired other colleagues internally to help us process them.
                 <br /><br />
-                It was so much fun making tons of bonuses. But then the bank got suspicious of us, started an investigation, and they didn't like our project at all, even though some customers would end up getting loans. They eventually fired me on the grounds of breaking the internal procedure of how applications were processed, because I was not allowed to reassign any of my work to other employees. I was 19 years old. I was devastated. But I learned a big lesson: you can't be a cowboy in the corporate world, you can't do anything without a prior approval.
+                It was so much fun making tons of bonuses. But then the bank got suspicious of us, started an investigation, and they didn't like our project at all, even though some customers would end up getting loans. They eventually fired me on the grounds of breaking the internal procedure of how applications were processed because I was not allowed to reassign any of my work to other employees. I was 19 years old. I was devastated. But I learned a big lesson: you can't be a cowboy in the corporate world, you can't do anything without prior approval.
                 <br /><br />
-                The funniest thing, though, is that the next year, the bank implemented this project as a de facto standard approach to selling loans, and somebody probably got a huge promotion for the idea. Another validation check point.
+                The funniest thing, though, is that the next year, the bank implemented this project as a de facto standard approach to selling loans, and somebody probably got a huge promotion for the idea. Another validation checkpoint.
               </>
             }
           />
@@ -345,15 +347,16 @@ const Roadmap = () => {
             title="Consulting experience (2010-2015)"
             subtext={
               <>
-                Consulting was probably the most </>}subtext2={<> boring part of my life, despite being the most intense and educational experience.
-                <br /><br />
-                Coming from mostly technical and entrepreneurial background, aligning myself with the corporate world was a challenge.
-                <br /><br />
-                Day in and day out managing client expectations and just talking, which felt like a departure from my true passions.
-                <br /><br />
-                The remaining time was dedicated to project management and delivering enterprise software solutions. Tedious work, but I recognized its value to these dinasour companies.
-                <br /><br />
-                I persevered through five years of delivering polished, profitable projects to clients across Denmark, Italy, Russia, the UAE, and Egypt. My dedication earned me top performance ratings and several promotions along the way.              </>
+                Consulting was probably the most </>} subtext2={<> boring part of my life, despite being the most intense and educational experience.
+                  <br /><br />
+                  Coming from a mostly technical and entrepreneurial background, aligning myself with the corporate world was a challenge.
+                  <br /><br />
+                  Day in and day out managing client expectations and just talking felt like a departure from my true passions.
+                  <br /><br />
+                  The remaining time was dedicated to project management and delivering enterprise software solutions. Tedious work, but I recognized its value to these dinosaur companies.
+                  <br /><br />
+                  I persevered through five years of delivering polished, profitable projects to clients across Denmark, Italy, Russia, the UAE, and Egypt. My dedication earned me top performance ratings and several promotions along the way.
+                </>
             }
           />
           <RoadMapItem
@@ -363,9 +366,9 @@ const Roadmap = () => {
               <>
                 It was an incredible journey. I had saved up $150k before I left my comfortable job at Accenture and </>}subtext2={<> started a bootstrapped business with my university friend Alex.
                 <br /><br />
-                We almost went under water, but pivoted at the last second and found a lucrative niche of booking processing for hotels. 
+                We almost went underwater, but pivoted at the last second and found a lucrative niche in booking processing for hotels. 
                 <br /><br />
-                We quickly grew the company to 100 employees (5 engineers) and $8m in GMV. And sold part of the company within 18 months of starting it.
+                We quickly grew the company to 100 employees (5 engineers) and $8m in GMV. We sold part of the company within 18 months of starting it.
               </>
             }
           />
@@ -374,7 +377,7 @@ const Roadmap = () => {
             title="Rent automation (2017-2018)"
             subtext={
               <>
-                After having the successful small exit experience, I felt so pumped. I thought I was a genius and could do anything. I started a new project </>}subtext2={<> in the real estate industry, building a platform to automate the rental process.
+                After having the successful small exit experience, I felt so pumped. I thought I was a genius and could do anything. I started a new project in the real estate industry, building a platform to automate the rental process.
                 <br /><br />
                 Oh, I wish I had been a quicker learner. The idea of rent automation is by all means a tar pit idea. It looks so plausible on the surface, right? Go and automate the archaic rental process of apartments, creating an Uber-like experience on Craigslist.
                 <br /><br />
@@ -393,7 +396,7 @@ const Roadmap = () => {
             title="ARINA"
             subtext={
               <>
-                First legitimate experience in the AI/ML space. I'm deeply grateful to MESI university for introducing me to neural networks.
+                First legitimate experience in the AI/ML space. I'm deeply grateful to MESI University for introducing me to neural networks.
                 <br /><br />
                 Inspired by AI breakthroughs like DeepMind's AlphaGo defeating Go champion Lee Sedol, I </>}subtext2={<> launched a new project in the AI/ML sector.
                 <br /><br />
@@ -421,38 +424,38 @@ const Roadmap = () => {
                 <br /><br />
                 Back in Russia, the real estate market collapsed. The ruble lost half its value in a week. The market froze, and my company suffered greatly. I was forced to make the heart-wrenching decision to shut it down.
               </>
-}
+                }
           />
           <RoadMapItem
             addToRef={addToRefs}
             title="US journey (2022-Present)"
             subtext={
               <>
-                Oh, how I wished for a smooth transition to the US, but reality had other plans</>}subtext2={<>. My past achievements meant little here. Amidst personal upheavals, including a breakup and friends not following through on promises to relocate.
+                Oh, how I wished for a smooth transition to the US, but reality had other plans.</>}subtext2={<> My past achievements meant little here. Amidst personal upheavals, including a breakup and friends not following through on promises to relocate.
                 <br /><br />
                 I found myself at San Francisco airport in April 2022 all alone. Drying up savings, without connections, struggling with English, coding skills forgotten, and clueless about the US startup scene.
                 <br /><br />
                 The first step was to connect with someone in the know. I moved into a Startup house in Palo Alto. My first day was filled with excitement, hoping to meet fellow entrepreneurs and possibly find a co-founder within a week. Instead, I found many were aspiring 'entrepreneurs' working odd jobs.
                 <br /><br />
-                Despite the risk of falling into the same trap, I was fortunate to meet my first co-founder there. Our project was a disaster, but our friendship endured our breakup as co-founders. Which later led to so many fruitful conversations and references. What happened next?
+                Despite the risk of falling into the same trap, I was fortunate to meet my first co-founder there. Our project was a disaster, but our friendship endured our breakup as co-founders, which later led to so many fruitful conversations and references. What happened next?
                 <br /><br />
                 I knew I needed to build my reputation. But how? Where to start?
                 <br /><br />
                 To succeed as a startup founder, you need two things: technical skills and direct communication with your customers/users. So, I enrolled in daily English classes. I began coding again, building apps, meeting people, and showcasing my work.
                 <br /><br />
-                Ohh. It is so hard. You get a brillaint idea, you start executing, and you crash against the wall of reality.
+                Ohh. It is so hard. You get a brilliant idea, you start executing, and you crash against the wall of reality.
                 <br /><br />
                 First, the contrast with the rest of the world was stark: what I did in Russia was years behind what was happening in the Bay.
                 <br /><br />
-                Second, the average attention span of people in the Bay is about five times shorter than elsewhere, because there are so many things happening at the same time.
+                Second, the average attention span of people in the Bay is about five times shorter than elsewhere because there are so many things happening at the same time.
                 <br /><br />
-                Third, The competition is fierce. You must be the best to get noticed, delivering outstanding results from the first draft of your project.
+                Third, the competition is fierce. You must be the best to get noticed, delivering outstanding results from the first draft of your project.
                 <br /><br />
                 I embarked on building. One app, then another, and another... I worked on close to 15 projects in 2 years, spanning consumer, B2B, enterprise, finance, marketing, social media, cloud infrastructure, and developer tools.
                 <br /><br />
                 Some projects gained traction, with thousands of users and thousands in monthly recurring revenue. A few even received recognition from well-known founders and experts.
                 <br /><br />
-                But none of the 15 projects worked out. Cofounder disputes, bad ideas, lack of expertise in certain tech stack, intense competition, lack of funding- many reasons. 
+                But none of the 15 projects worked out. Cofounder disputes, bad ideas, lack of expertise in certain tech stacks, intense competition, lack of funding—many reasons. 
                 <br /><br />
                 But I'm still here. Still building, learning, growing, and hustling.
                 <br /><br />
@@ -476,23 +479,23 @@ const Roadmap = () => {
                <br /><br />
                I clearly remember the night when I went back to my room after a 15-hour meditation day. I lay down, and then the familiar nightmare stress would roll in. And this type of nightmare had been chasing me my entire life. Ever since I was a kid, maybe 7 or 8 years old, I remember this nightmare coming back to me again and again.
                <br /><br />
-               It was so deeply ingrained in me, it was like an enemy who grew up with me and knew all my weak spots. It was like a shadow that was always there, always following me, always waiting for the right moment to strike.
+               It was so deeply ingrained in me, it was like an enemy who grew up with me an enemy who grew up with me and knew all my weak spots. It was like a shadow that was always there, always following me, always waiting for the right moment to strike.
                <br /><br />
                And for the first time ever, I was able to look into his eyes and just observe him. I was able to see him for what he was. I was able to see that he was just a shadow, just a figment of my imagination. He was nothing but a projection of my own fears and insecurities.
                <br /><br />
-               OMG, I thought I became immortal or something, haha. After that night, I ran to an interview with my teach next morning to boast about my breakthrough. Bruce congratulated me, and my journey began.
+               OMG, I thought I became immortal or something, haha. After that night, I ran to an interview with my teacher the next morning to boast about my breakthrough. Bruce congratulated me, and my journey began.
                <br /><br />
-               In the following 12 months, I spent 60 days meditating full time on top of my daily 2 hours practice. Which seems ridiculous. It's like running a marathon for a person who never ran in his life.
+               In the following 12 months, I spent 60 days meditating full-time on top of my daily 2-hour practice. Which seems ridiculous. It's like running a marathon for a person who never ran in his life.
                <br /><br />
                It seems such a waste of time and energy, to spend so much time doing nothing? Right? It is so counterintuitive. It doesn't make any sense. Well, until it does.
                <br /><br />
                The first 90 days of practice were hard. I did get out of depression. The investment paid off well. But it wasn't a complete remedy. And no other big breakthroughs followed.
-              <br /><br />
-              But I continued, and to keep myself upbeat and accountable, I signed up for another course. I went on a second course, I made more meditator friends. We continued daily practice together over Zoom. It helped. We still meditate from time to time, but it's not critical anymore. Then I signed up for a third course. Then I did a few more two and three-day courses. Then I signed up for a 4th course. And things started to evolve. Things really started to shift in my life.
-              <br /><br />
-              I quit all bad habits I could name. No weed, no alcohol, no excessive sugar. Exercise every dayly for at least an hour. Running, competitive sports. Meticulous daily sleep schedule. Work discipline. Relationship with friends. Girlfriend. New hobbies outside of tech like contact improv, ecstatic dance, cooking. Writing a journal, writing a blog. And the coding became so much better, winning in hackathons, being recognized as a legit engineer by Sergey Brin, Jimmy Ba, and others. Wow, I never felt so much clarity in my life. I never felt so happy.
-              <br /><br />
-              So here I am, still running out of money, but with a ton of enthusiasm. Happy to venture into new projects, figuring out how to build the next big thing...
+               <br /><br />
+               But I continued, and to keep myself upbeat and accountable, I signed up for another course. I went on a second course, I made more meditator friends. We continued daily practice together over Zoom. It helped. We still meditate from time to time, but it's not critical anymore. Then I signed up for a third course. Then I did a few more two and three-day courses. Then I signed up for a 4th course. And things started to evolve. Things really started to shift in my life.
+               <br /><br />
+               I quit all bad habits I could name. No weed, no alcohol, no excessive sugar. Exercise every day for at least an hour. Running, competitive sports. Meticulous daily sleep schedule. Work discipline. Relationship with friends. Girlfriend. New hobbies outside of tech like contact improv, ecstatic dance, cooking. Writing a journal, writing a blog. And the coding became so much better, winning in hackathons, being recognized as a legit engineer by Sergey Brin, Jimmy Ba, and others. Wow, I never felt so much clarity in my life. I never felt so happy.
+               <br /><br />
+               So here I am, still running out of money, but with a ton of enthusiasm. Happy to venture into new projects, figuring out how to build the next big thing...
               </>
             }
           />
