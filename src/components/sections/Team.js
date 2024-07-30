@@ -129,6 +129,7 @@ const Team = () => {
     <Section id="team">
       <Title>Recent Projects</Title>
       <Container>
+        <MemberComponent link="https://www.linkedin.com/posts/matthew-diakonov-a84a1911_users-often-hate-typing-but-in-ai-chats-activity-7215529277272805376-oLfz?utm_source=share&utm_medium=member_desktop" name="Shadcn for AI" position="Customizable open source react components, LLM to generate UI content to adapt to user experience" />
         <MemberComponent link="https://www.linkedin.com/posts/matthew-diakonov-a84a1911_made-a-search-assistant-this-weekend-for-activity-7205835625688670210-pdKg?utm_source=share&utm_medium=member_desktop" name="AI Sales Assistant" position="An assistant that helps users find products. Rendering a React carousel through function calls for an e-commerce product catalog. The product search is multi-modal, allowing for context-based image searches" />
         <MemberComponent link="https://www.linkedin.com/posts/matthew-diakonov-a84a1911_just-launched-an-autodebugger-a-typical-activity-7204346521654366208-4Iye?utm_source=share&utm_medium=member_desktop" name="GPT Auto Debugger" position="Coding assistant that actually test runs the code in a safe sandbox environment." />
         <MemberComponent link="https://www.linkedin.com/posts/matthew-diakonov-a84a1911_new-cli-interface-for-httpslnkdingsnrwjf-activity-7194409697230168066-l95n?utm_source=share&utm_medium=member_desktop" name="Gemini 4 Docs" position="Search and chat with any documentation inside your terminal." />
