@@ -163,7 +163,6 @@ const apps = [
   {
     name: "Claude Code",
     description: "AI-powered coding — running 20 agents in parallel for maximum velocity",
-    link: "https://claude.ai/claude-code",
   },
   {
     name: "Fazm",
@@ -173,12 +172,10 @@ const apps = [
   {
     name: "Arc Browser",
     description: "Modern browser with spaces, profiles, and a clean UI",
-    link: "https://arc.net",
   },
   {
     name: "Wispr Flow",
     description: "Voice-to-text that actually works — dictate code, messages, and notes",
-    link: "https://wispr.com",
   },
 ];
 
