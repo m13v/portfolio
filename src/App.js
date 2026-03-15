@@ -3,6 +3,7 @@
 import GlobalStyles from "./styles/GlobalStyles";
 import { light } from "./styles/Themes";
 import { ThemeProvider } from "styled-components";
+import { Routes, Route } from "react-router-dom";
 
 // import { lazy, Suspense } from "react";
 // import Loading from "./components/Loading";
@@ -28,24 +29,33 @@ import Footer from "./components/Footer";
 import Showcase from "./components/sections/Showcase";
 import Faq from "./components/sections/Faq";
 import ScrollToTop from "./components/ScrollToTop";
+import Setup from "./components/sections/Setup";
+
+function HomePage() {
+  return (
+    <>
+      <Navigation />
+      <Home />
+      <About />
+      <Roadmap />
+      <Showcase />
+      <Team />
+      <Faq />
+      <Footer />
+      <ScrollToTop />
+    </>
+  );
+}
 
 function App() {
   return (
     <main>
       <GlobalStyles />
       <ThemeProvider theme={light}>
-        {/* <Suspense fallback={<Loading />}> */}
-          <Navigation />
-          <Home />
-          <About />
-          <Roadmap />
-          <Showcase />
-          <Team />
-          <Faq />
-          <Footer />
-          {/* <ScrollToTop scrollPosition={y}/> */}
-          <ScrollToTop />{" "}
-        {/* </Suspense> */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/setup" element={<Setup />} />
+        </Routes>
       </ThemeProvider>
     </main>
   );
