@@ -1,0 +1,223 @@
+import {
+  DataStyleConfig,
+  DisplayConfig,
+  EffectsConfig,
+  FontsConfig,
+  MailchimpConfig,
+  ProtectedRoutesConfig,
+  RoutesConfig,
+  SameAsConfig,
+  SchemaConfig,
+  SocialSharingConfig,
+  StyleConfig,
+} from "@/types";
+import { home } from "./index";
+
+const baseURL: string = "https://m13v.com";
+
+const routes: RoutesConfig = {
+  "/": true,
+  "/about": true,
+  "/work": true,
+  "/blog": false,
+  "/gallery": false,
+  "/setup": true,
+};
+
+const display: DisplayConfig = {
+  location: true,
+  time: true,
+  themeSwitcher: true,
+};
+
+const protectedRoutes: ProtectedRoutesConfig = {};
+
+import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+
+const heading = Inter({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const body = Inter({
+  variable: "--font-body",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const label = Inter({
+  variable: "--font-label",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const code = JetBrains_Mono({
+  variable: "--font-code",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const fonts: FontsConfig = {
+  heading: heading,
+  body: body,
+  label: label,
+  code: code,
+};
+
+const style: StyleConfig = {
+  theme: "dark",
+  neutral: "slate",
+  brand: "cyan",
+  accent: "violet",
+  solid: "contrast",
+  solidStyle: "flat",
+  border: "playful",
+  surface: "translucent",
+  transition: "all",
+  scaling: "100",
+};
+
+const dataStyle: DataStyleConfig = {
+  variant: "gradient",
+  mode: "categorical",
+  height: 24,
+  axis: {
+    stroke: "var(--neutral-alpha-weak)",
+  },
+  tick: {
+    fill: "var(--neutral-on-background-weak)",
+    fontSize: 11,
+    line: false,
+  },
+};
+
+const effects: EffectsConfig = {
+  mask: {
+    cursor: false,
+    x: 50,
+    y: 0,
+    radius: 100,
+  },
+  gradient: {
+    display: true,
+    opacity: 60,
+    x: 50,
+    y: 0,
+    width: 100,
+    height: 50,
+    tilt: 0,
+    colorStart: "brand-background-strong",
+    colorEnd: "page-background",
+  },
+  dots: {
+    display: true,
+    opacity: 20,
+    size: "2",
+    color: "brand-background-strong",
+  },
+  grid: {
+    display: false,
+    opacity: 100,
+    color: "neutral-alpha-medium",
+    width: "0.25rem",
+    height: "0.25rem",
+  },
+  lines: {
+    display: false,
+    opacity: 100,
+    color: "neutral-alpha-weak",
+    size: "16",
+    thickness: 1,
+    angle: 45,
+  },
+};
+
+const mailchimp: MailchimpConfig = {
+  action: "https://url/subscribe/post?parameters",
+  effects: {
+    mask: {
+      cursor: true,
+      x: 50,
+      y: 0,
+      radius: 100,
+    },
+    gradient: {
+      display: true,
+      opacity: 90,
+      x: 50,
+      y: 0,
+      width: 50,
+      height: 50,
+      tilt: 0,
+      colorStart: "accent-background-strong",
+      colorEnd: "static-transparent",
+    },
+    dots: {
+      display: true,
+      opacity: 20,
+      size: "2",
+      color: "brand-on-background-weak",
+    },
+    grid: {
+      display: false,
+      opacity: 100,
+      color: "neutral-alpha-medium",
+      width: "0.25rem",
+      height: "0.25rem",
+    },
+    lines: {
+      display: false,
+      opacity: 100,
+      color: "neutral-alpha-medium",
+      size: "16",
+      thickness: 1,
+      angle: 90,
+    },
+  },
+};
+
+const schema: SchemaConfig = {
+  logo: "",
+  type: "Person",
+  name: "Matthew Diakonov",
+  description: home.description,
+  email: "i@m13v.com",
+};
+
+const sameAs: SameAsConfig = {
+  threads: "",
+  linkedin: "https://www.linkedin.com/in/matthew-diakonov-a84a1911/",
+  discord: "",
+};
+
+const socialSharing: SocialSharingConfig = {
+  display: true,
+  platforms: {
+    x: true,
+    linkedin: true,
+    facebook: false,
+    pinterest: false,
+    whatsapp: false,
+    reddit: false,
+    telegram: true,
+    email: true,
+    copyLink: true,
+  },
+};
+
+export {
+  display,
+  mailchimp,
+  routes,
+  protectedRoutes,
+  baseURL,
+  fonts,
+  style,
+  schema,
+  sameAs,
+  socialSharing,
+  effects,
+  dataStyle,
+};
