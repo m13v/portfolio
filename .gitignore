@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Playwright MCP cache
+.playwright-mcp/
+
+# Generated web scraping/indexing artifacts
+https_*.json
+http_*.json
+
+# Stray screenshots and images at root
+/*.png
+/*.jpeg
+/*.jpg
+/*.yml
