@@ -445,34 +445,38 @@ export default function Home() {
             project in the real estate industry, building a platform to automate
             the rental process.
           </Text>
-          <Text variant="body-default-s" onBackground="neutral-weak">
-            Oh, I wish I had been a quicker learner. The idea of rent automation
-            is by all means a tar pit idea. It looks so plausible on the surface,
-            right? Go and automate the archaic rental process of apartments,
-            creating an Uber-like experience on Craigslist.
-          </Text>
-          <Text variant="body-default-s" onBackground="neutral-weak">
-            But the reality is that the rental process is very human-centric.
-            It&apos;s not about the technology; it&apos;s about the people. And
-            the people are not ready to change their habits.
-          </Text>
-          <Text variant="body-default-s" onBackground="neutral-weak">
-            Also, since it&apos;s a people-centered business, it&apos;s primarily
-            driven by trust and not logic. And trust is not something you can
-            build with technology. It&apos;s a long-term relationship. Nobody
-            cares if you can make an extra 10% in rental income unless you build
-            the credibility that you are a legitimate business.
-          </Text>
-          <Text variant="body-default-s" onBackground="neutral-weak">
-            Well, anyway, it was a great experience, with lots of lessons
-            learned. I&apos;m glad I didn&apos;t lose too much time on this
-            project.
-          </Text>
-          <Text variant="body-default-s" onBackground="neutral-weak">
-            It wasn&apos;t an outright failure. We had close to 300 paying
-            customers, $1.3 million in GMV, $300k in ARR at peak, and an 80%
-            margin. The company is still active.
-          </Text>
+          <Accordion title="Read more" size="s">
+            <Column gap="8">
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                Oh, I wish I had been a quicker learner. The idea of rent automation
+                is by all means a tar pit idea. It looks so plausible on the surface,
+                right? Go and automate the archaic rental process of apartments,
+                creating an Uber-like experience on Craigslist.
+              </Text>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                But the reality is that the rental process is very human-centric.
+                It&apos;s not about the technology; it&apos;s about the people. And
+                the people are not ready to change their habits.
+              </Text>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                Also, since it&apos;s a people-centered business, it&apos;s primarily
+                driven by trust and not logic. And trust is not something you can
+                build with technology. It&apos;s a long-term relationship. Nobody
+                cares if you can make an extra 10% in rental income unless you build
+                the credibility that you are a legitimate business.
+              </Text>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                Well, anyway, it was a great experience, with lots of lessons
+                learned. I&apos;m glad I didn&apos;t lose too much time on this
+                project.
+              </Text>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                It wasn&apos;t an outright failure. We had close to 300 paying
+                customers, $1.3 million in GMV, $300k in ARR at peak, and an 80%
+                margin. The company is still active.
+              </Text>
+            </Column>
+          </Accordion>
         </Column>
       ),
     },
