@@ -22,25 +22,25 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/matthew-diakonov-a84a1911/",
+    link: "https://www.linkedin.com/in/m13v/",
     essential: true,
   },
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/matthew-heartful",
+    link: "https://github.com/m13v",
     essential: true,
   },
   {
     name: "X",
     icon: "twitter",
-    link: "https://twitter.com/MatthewHeartful",
+    link: "https://x.com/m13v_",
     essential: true,
   },
   {
     name: "Telegram",
     icon: "telegram",
-    link: "https://t.me/matthew_ddi",
+    link: "https://t.me/m13vcom",
     essential: true,
   },
   {
