@@ -1053,14 +1053,6 @@ export default function Home() {
                 </Text>
               </Column>
             </Accordion>
-            <Button
-              href="mailto:i@m13v.com"
-              variant="tertiary"
-              size="s"
-              arrowIcon
-            >
-              If any of this clicks with you, send me an email
-            </Button>
           </Column>
         </Row>
         <Row fillWidth paddingLeft="64" horizontal="end">
