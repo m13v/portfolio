@@ -16,6 +16,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
       person_profiles: "always",
       capture_pageview: true,
       capture_pageleave: true,
+      disable_compression: true,
     });
   }, []);
 
