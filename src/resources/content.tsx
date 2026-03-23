@@ -1,5 +1,5 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Row, Text } from "@once-ui-system/core";
+import { Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Matthew",
@@ -62,11 +62,7 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">screenpipe</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Latest project
-        </Text>
+        <strong className="ml-4">screenpipe</strong>
       </Row>
     ),
     href: "/work/screenpipe",
