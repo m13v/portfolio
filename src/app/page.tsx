@@ -853,7 +853,6 @@ export default function Home() {
           )}
 
           <RevealFx
-            translateY="4"
             fillWidth
             horizontal="center"
             paddingBottom="16"
@@ -864,7 +863,6 @@ export default function Home() {
           </RevealFx>
 
           <RevealFx
-            translateY="8"
             delay={0.2}
             fillWidth
             horizontal="center"
@@ -881,7 +879,6 @@ export default function Home() {
           </RevealFx>
 
           <RevealFx
-            translateY="8"
             delay={0.3}
             fillWidth
             horizontal="center"
@@ -904,7 +901,6 @@ export default function Home() {
           </RevealFx>
 
           <RevealFx
-            translateY="8"
             delay={0.4}
             fillWidth
             horizontal="center"
