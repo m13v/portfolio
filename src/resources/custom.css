@@ -1,3 +1,13 @@
+/* Disable scroll hijacking — let the browser handle scrolling naturally */
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Prevent horizontal overflow on mobile */
+body {
+  overflow-x: hidden;
+}
+
 /* Prevent accordion focus outline on mouse click (keep for keyboard nav) */
 [role="button"][aria-expanded]:focus:not(:focus-visible) {
   outline: none;
