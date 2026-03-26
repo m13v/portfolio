@@ -810,7 +810,7 @@ export default function Home() {
   ];
 
   return (
-    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
+    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center" style={{ overflowX: "hidden" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -935,7 +935,7 @@ export default function Home() {
         <Row fillWidth paddingRight="64">
           <Line maxWidth={48} />
         </Row>
-        <Row fillWidth gap="32" s={{ direction: "column" }}>
+        <Row fillWidth gap="32" s={{ direction: "column", gap: "24" }}>
           <Column flex={1} gap="16">
             <Heading as="h2" variant="display-strong-s">
               My Story
