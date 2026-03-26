@@ -20,7 +20,6 @@ import {
 import { home, about, person, baseURL, routes } from "@/resources";
 import { ProjectList } from "@/components/work/ProjectList";
 import { getPosts } from "@/utils/utils";
-import { NoScrollAccordion } from "@/components/NoScrollAccordion";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -811,7 +810,6 @@ export default function Home() {
   ];
 
   return (
-    <NoScrollAccordion>
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
       <Schema
         as="webPage"
@@ -1109,6 +1107,5 @@ export default function Home() {
         </Text>
       </Column>
     </Column>
-    </NoScrollAccordion>
   );
 }
