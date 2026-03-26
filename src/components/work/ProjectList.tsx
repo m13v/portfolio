@@ -48,7 +48,7 @@ export function ProjectList({ projects }: { projects: ProjectData[] }) {
             >
               {String(index + 1).padStart(2, "0")}
             </Text>
-            <Text variant="heading-strong-s" style={{ flex: 1, whiteSpace: "nowrap" }}>
+            <Text variant="heading-strong-s" style={{ flex: 1, minWidth: 0 }}>
               {post.metadata.title}
             </Text>
             <Row flex={2} hide s={{ hide: false }}>
