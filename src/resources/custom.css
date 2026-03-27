@@ -8,6 +8,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Disable scroll anchoring — prevents scroll jumps when lazy-loaded
+   images in project cards change layout height during scroll */
+body {
+  overflow-anchor: none;
+}
+
 /* Prevent accordion focus outline on mouse click (keep for keyboard nav) */
 [role="button"][aria-expanded]:focus:not(:focus-visible) {
   outline: none;
