@@ -810,7 +810,7 @@ export default function Home() {
   ];
 
   return (
-    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center" style={{ overflowX: "hidden" }}>
+    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center" style={{ overflowX: "hidden", maxWidth: "55rem" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
