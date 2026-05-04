@@ -118,8 +118,15 @@ const about: About = {
             Won 3 hackathons in the Bay Area at AGI House and Cerebral Valley.
           </>,
           <>
-            Created screenpipe — a technical deep dive into screen recording, OCR & STT,
-            local databases, and AI pipelines.
+            Cofounded screenpipe, fundraised $2,850,000, 15k GitHub stars.
+          </>,
+          <>
+            On top of it, created fazm.ai, a Jarvis style AI assistant that does real work for you,
+            scaled to thousands of MRR despite being fully open source.
+          </>,
+          <>
+            Created social-autoposter tool (s4l.ai) that reaches millions of users every month
+            on autopilot with AI-generated content grounded in information from the internet and customers.
           </>,
         ],
         images: [],
