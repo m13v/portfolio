@@ -62,7 +62,9 @@ export default async function Project({
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slugPath);
+  const __all = getPosts(["src", "app", "work", "projects"]);
+  let post = __all.find((post) => post.slug === slugPath);
+  console.error(`[DBG work/slug] cwd=${process.cwd()} slugPath=${slugPath} count=${__all.length} slugs=${__all.map((p) => p.slug).join(",")} found=${!!post}`);
 
   if (!post) {
     notFound();
