@@ -18,6 +18,7 @@ const stats: { value: string; label: string }[] = [
   { value: "10K", label: "commits / month" },
   { value: "xAI", label: "offer turned down (when they were 20 people)" },
   { value: "1", label: "exit" },
+  { value: "$5M", label: "raised across 5 startups (incl. the current one)" },
   { value: "100", label: "people managed" },
   { value: "$Bn", label: "companies advised as a consultant" },
   { value: "15 yrs", label: "of 80-hour weeks" },
