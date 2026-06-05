@@ -122,7 +122,7 @@ export function FreeDayOffer() {
                   onBackground="brand-strong"
                   style={{ lineHeight: 1.4 }}
                 >
-                  —
+                  •
                 </Text>
                 <Text variant="body-default-l" onBackground="neutral-medium">
                   {b}
