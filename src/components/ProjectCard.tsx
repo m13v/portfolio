@@ -34,9 +34,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     <Column fillWidth gap="m">
       {title && (
         <Flex paddingX="s">
-          <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-            {title}
-          </Heading>
+          {href ? (
+            <SmartLink href={href} style={{ margin: "0", width: "fit-content" }}>
+              <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+                {title}
+              </Heading>
+            </SmartLink>
+          ) : (
+            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+              {title}
+            </Heading>
+          )}
         </Flex>
       )}
       <Carousel
