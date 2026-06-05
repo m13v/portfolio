@@ -76,9 +76,9 @@ export default async function Project({
     })) || [];
 
   return (
-    <Column as="section" maxWidth="m" horizontal="center" gap="l">
-      <h1 data-dbg="bare">{post.metadata.title}</h1>
-      <p data-dbg="content">{post.content.slice(0, 200)}</p>
-    </Column>
+    <div data-dbg="plain">
+      <h1>{post.metadata.title}</h1>
+      <p>{post.content.slice(0, 200)}</p>
+    </div>
   );
 }
