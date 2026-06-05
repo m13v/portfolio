@@ -19,6 +19,7 @@ import {
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
 import { ProjectList } from "@/components/work/ProjectList";
+import { FreeDayOffer } from "@/components/FreeDayOffer";
 import { getPosts } from "@/utils/utils";
 
 export async function generateMetadata() {
@@ -929,6 +930,9 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
+
+      {/* ── FREE DAY OFFER ── */}
+      <FreeDayOffer />
 
       {/* ── STORY ── */}
       <Column fillWidth gap="24" paddingY="l">
