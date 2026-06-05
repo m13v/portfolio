@@ -891,7 +891,7 @@ export default function Home() {
                 wrap="balance"
               >
                 Engineering (40+ products, won 16 hackathons, judged 9),
-                startups (9 startups, 1 exit, 4 funded, $6M raised), vipassana
+                startups (9 startups, 1 exit, 5 funded, $5M raised), vipassana
                 meditation (8 courses completed, <VipassanaDays />d of
                 practice).
               </Text>
