@@ -18,7 +18,7 @@ const baseURL: string = "https://m13v.com";
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
-  "/work": false,
+  "/work": true,
   "/blog": false,
   "/gallery": false,
   "/setup": true,
