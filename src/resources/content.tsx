@@ -109,24 +109,30 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "Independent / Open Source",
-        timeframe: "2022 – Present",
-        role: "Engineer & Founder",
+        company: "S4L (s4l.ai)",
+        timeframe: "2025 – Present",
+        role: "Founder",
         achievements: [
+          <>
+            Building S4L, a done-for-you Reddit and X growth service. Humans and AI agents
+            hand-pick high-intent threads where your buyers are asking, write the reply in
+            your brand voice, and post it from accounts that read as real community members.
+            Clients pay only for signed-up users or scheduled B2B calls.
+          </>,
+          <>
+            Autonomous engagement pipelines across Reddit, Twitter/X, and GitHub, plus DM
+            outreach and programmatic SEO with DataForSEO and Google Search Console.
+            Reaches millions of users every month on autopilot; core autoposter is open
+            source (github.com/m13v/social-autoposter).
+          </>,
           <>
             Built 20+ products spanning AI/ML, developer tools, and consumer apps.
             Won 3 hackathons in the Bay Area at AGI House and Cerebral Valley.
           </>,
           <>
-            Cofounded screenpipe, fundraised $2,850,000, 15k GitHub stars.
-          </>,
-          <>
-            On top of it, created fazm.ai, a Jarvis style AI assistant that does real work for you,
-            scaled to thousands of MRR despite being fully open source.
-          </>,
-          <>
-            Created social-autoposter tool (s4l.ai) that reaches millions of users every month
-            on autopilot with AI-generated content grounded in information from the internet and customers.
+            Cofounded screenpipe, fundraised $2,850,000, 15k GitHub stars. Created fazm.ai,
+            a Jarvis style AI assistant that does real work for you, scaled to thousands of
+            MRR despite being fully open source.
           </>,
         ],
         images: [],
