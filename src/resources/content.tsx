@@ -70,7 +70,7 @@ const home: Home = {
   subline: (
     <>
       I&apos;m at the intersection of engineering (20 products, won 3 hackathons in the Bay),
-      startups (1 exit, 3 funded startups), vipassana meditation, and sports.
+      startups (1 exit, 5 funded startups), vipassana meditation, and sports.
       Currently based in <Text as="span" size="xl" weight="strong">San Francisco</Text>, building the next thing.
     </>
   ),
@@ -212,7 +212,7 @@ const about: About = {
       {
         title: "Product & Startups",
         description: (
-          <>1 exit, 3 funded startups, 20+ shipped products. From idea to users.</>
+          <>1 exit, 5 funded startups, 20+ shipped products. From idea to users.</>
         ),
         images: [],
       },
