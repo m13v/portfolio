@@ -33,7 +33,6 @@ function getMDXFiles(dir: string) {
 
 function readMDXFile(filePath: string) {
   if (!fs.existsSync(filePath)) {
-    console.error(`[DBG readMDXFile] MISSING FILE -> notFound: ${filePath}`);
     notFound();
   }
 
