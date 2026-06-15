@@ -84,6 +84,14 @@ body {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--static-space-12);
   width: 100%;
+  justify-items: stretch;
+}
+/* Force each Once UI Card (and its inner bordered element) to fill its grid
+   track so all cards are equal width */
+.statGrid > *,
+.statGrid > * > * {
+  width: 100%;
+  min-width: 0;
 }
 @media (max-width: 768px) {
   .statGrid {
