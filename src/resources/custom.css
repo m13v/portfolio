@@ -78,3 +78,15 @@ body {
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+/* Stat grid on home: exactly 4 cards per row on desktop, evenly sized */
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--static-space-12);
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .statGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
