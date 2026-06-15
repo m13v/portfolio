@@ -488,13 +488,11 @@ export default function Home() {
           <Text variant="body-default-m" onBackground="neutral-weak">
             First legitimate experience in the AI/ML space. I&apos;m deeply
             grateful to MESI University for introducing me to neural networks.
-            Inspired by AI breakthroughs like DeepMind&apos;s AlphaGo defeating
-            Go champion Lee Sedol, I
           </Text>
           <Accordion title="Read more" size="s">
             <Column gap="8">
               <Text variant="body-default-s" onBackground="neutral-weak">
-                launched a new project in the AI/ML sector.
+                I launched a new project in the AI/ML sector.
               </Text>
               <Text variant="body-default-s" onBackground="neutral-weak">
                 We analyzed millions of real estate sales records, merged them
