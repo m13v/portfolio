@@ -80,14 +80,7 @@ export function FreeDayOffer() {
 
       {/* Stat grid */}
       <RevealFx delay={0.3} fillWidth>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
-            gap: "var(--static-space-12)",
-            width: "100%",
-          }}
-        >
+        <div className="statGrid">
           {stats.map((s) => (
             <Card
               key={s.label}
