@@ -18,8 +18,7 @@ const stats: { value: string; label: string }[] = [
   { value: "10K", label: "commits / month" },
   { value: "xAI", label: "offer turned down (when they were 20 people)" },
   { value: "1", label: "exit" },
-  { value: "$5M", label: "raised across 5 startups (incl. the current one)" },
-  { value: "100", label: "people managed" },
+  { value: "$5M", label: "raised across 5 startups" },
   { value: "$Bn", label: "companies advised as a consultant" },
   { value: "15 yrs", label: "of 80-hour weeks" },
   { value: "10 yrs", label: "without taking a salary" },
@@ -84,7 +83,7 @@ export function FreeDayOffer() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
             gap: "var(--static-space-12)",
             width: "100%",
           }}
