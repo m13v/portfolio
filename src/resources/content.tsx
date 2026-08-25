@@ -240,8 +240,8 @@ const about: About = {
         title: "Full stack",
         description: (
           <>
-            Next.js, React, TypeScript, Python, Rust where it matters. I ship the
-            whole thing, from schema to landing page.
+            Next.js, React, TypeScript, Python, Node. I ship the whole thing, from
+            schema to landing page.
           </>
         ),
         images: [],
