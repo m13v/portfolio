@@ -65,8 +65,8 @@ const home: Home = {
   },
   subline: (
     <>
-      Engineer and founder in San Francisco. I cofounded screenpipe, sold a B2B
-      SaaS company before that, and ship code every day.
+      Engineer and founder in San Francisco. Building companies since 2008, here
+      since 2022.
     </>
   ),
 };
@@ -74,8 +74,8 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
-  description: `${person.name} – engineer and founder in San Francisco`,
+  title: `About: ${person.name}`,
+  description: `${person.name}, engineer and founder in San Francisco`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -106,7 +106,7 @@ const about: About = {
     experiences: [
       {
         company: "Sundial",
-        timeframe: "2026 – Present",
+        timeframe: "2026 to Present",
         role: "Cofounder (trial)",
         achievements: [
           <>
@@ -119,7 +119,7 @@ const about: About = {
       },
       {
         company: "S4L (s4l.ai)",
-        timeframe: "2025 – Present",
+        timeframe: "2025 to Present",
         role: "Founder",
         achievements: [
           <>
@@ -138,7 +138,7 @@ const about: About = {
       },
       {
         company: "screenpipe / Mediar",
-        timeframe: "2024 – 2025",
+        timeframe: "2024 to 2025",
         role: "Cofounder",
         achievements: [
           <>
@@ -155,7 +155,7 @@ const about: About = {
       },
       {
         company: "ARINA (AI Real Estate)",
-        timeframe: "2019 – 2022",
+        timeframe: "2019 to 2022",
         role: "Founder & CEO",
         achievements: [
           <>
@@ -173,8 +173,8 @@ const about: About = {
       },
       {
         company: "Hotel CRM",
-        timeframe: "2015 – 2017",
-        role: "Cofounder — exit",
+        timeframe: "2015 to 2017",
+        role: "Cofounder (exit)",
         achievements: [
           <>
             B2B SaaS CRM for small hotels. Grew to 100 employees and $8M GMV,
@@ -185,7 +185,7 @@ const about: About = {
       },
       {
         company: "Accenture Strategy",
-        timeframe: "2010 – 2015",
+        timeframe: "2010 to 2015",
         role: "Business Consultant",
         achievements: [
           <>
@@ -267,7 +267,7 @@ const work: Work = {
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photos – ${person.name}`,
+  title: `Photos by ${person.name}`,
   description: `Photos by ${person.name}`,
   images: [],
 };
