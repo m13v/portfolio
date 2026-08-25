@@ -1,11 +1,10 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Matthew",
   lastName: "Diakonov",
   name: "Matthew Diakonov",
-  role: "Engineer & Entrepreneur",
+  role: "Engineer & Founder",
   avatar: "/images/matthew/avatar.jpg",
   email: "i@m13v.com",
   location: "America/Los_Angeles",
@@ -56,22 +55,18 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: "Matthew Diakonov",
-  description: "Recent tech projects, hobbies, personal life story, friends",
-  headline: <>Yet another tech bro?</>,
+  description:
+    "Engineer and founder in San Francisco. Cofounded screenpipe (YC S26). Building agentic software.",
+  headline: <>I build agentic software.</>,
   featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">screenpipe</strong>
-      </Row>
-    ),
-    href: "/work/screenpipe",
+    display: false,
+    title: <>S4L</>,
+    href: "/work/s4l",
   },
   subline: (
     <>
-      I&apos;m at the intersection of engineering (20 products, won 3 hackathons in the Bay),
-      startups (1 exit, 5 funded startups), vipassana meditation, and sports.
-      Currently based in <Text as="span" size="xl" weight="strong">San Francisco</Text>, building the next thing.
+      Engineer and founder in San Francisco. I cofounded screenpipe, sold a B2B
+      SaaS company before that, and ship code every day.
     </>
   ),
 };
@@ -80,7 +75,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name} – engineer, entrepreneur, meditator, based in San Francisco`,
+  description: `${person.name} – engineer and founder in San Francisco`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -97,10 +92,11 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I live in San Francisco and work on various tech projects in ML, developer tools,
-        LLM apps, productivity, and EEG. I&apos;m a CS grad with an MBA, a former Accenture Strategy consultant,
-        and a serial entrepreneur with one exit. I discovered my spiritual journey through Vipassana meditation
-        and I&apos;m deeply invested in the SF tech community.
+        I live in San Francisco and build agentic software: developer tools, LLM
+        pipelines, and consumer products. CS degree, MBA, five years at Accenture
+        Strategy, then a B2B SaaS company I cofounded and sold. Since 2022 I have
+        been building in the US, most recently as a cofounder of screenpipe and
+        founder of S4L.
       </>
     ),
   },
@@ -109,30 +105,50 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
+        company: "Sundial",
+        timeframe: "2026 – Present",
+        role: "Cofounder (trial)",
+        achievements: [
+          <>
+            Infrastructure for human-agent collaboration: making agent work
+            legible and reviewable when model autonomy outpaces our capacity to
+            check it.
+          </>,
+        ],
+        images: [],
+      },
+      {
         company: "S4L (s4l.ai)",
         timeframe: "2025 – Present",
         role: "Founder",
         achievements: [
           <>
-            Building S4L, a done-for-you Reddit and X growth service. Humans and AI agents
-            hand-pick high-intent threads where your buyers are asking, write the reply in
-            your brand voice, and post it from accounts that read as real community members.
-            Clients pay only for signed-up users or scheduled B2B calls.
+            Done-for-you Reddit and X growth. Agents and humans pick high-intent
+            threads where buyers are already asking, write the reply in the
+            client&apos;s voice, and post it. Clients pay per signed-up user or
+            booked call.
           </>,
           <>
-            Autonomous engagement pipelines across Reddit, Twitter/X, and GitHub, plus DM
-            outreach and programmatic SEO with DataForSEO and Google Search Console.
-            Reaches millions of users every month on autopilot; core autoposter is open
-            source (github.com/m13v/social-autoposter).
+            Autonomous engagement pipelines across Reddit, X, and GitHub, plus DM
+            outreach and programmatic SEO on DataForSEO and Search Console. Core
+            autoposter is open source at github.com/m13v/social-autoposter.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "screenpipe / Mediar",
+        timeframe: "2024 – 2025",
+        role: "Cofounder",
+        achievements: [
+          <>
+            Cofounded screenpipe: continuous local screen and audio capture that
+            feeds context to coding agents. 21k GitHub stars, YC S26, $2.85M
+            raised.
           </>,
           <>
-            Built 20+ products spanning AI/ML, developer tools, and consumer apps.
-            Won 3 hackathons in the Bay Area at AGI House and Cerebral Valley.
-          </>,
-          <>
-            Cofounded screenpipe, fundraised $2,850,000, 15k GitHub stars. Created fazm.ai,
-            a Jarvis style AI assistant that does real work for you, scaled to thousands of
-            MRR despite being fully open source.
+            Built fazm.ai, a voice-first agent that operates a whole Mac. Scaled
+            to thousands in MRR while fully open source.
           </>,
         ],
         images: [],
@@ -143,24 +159,26 @@ const about: About = {
         role: "Founder & CEO",
         achievements: [
           <>
-            Analyzed millions of real estate sales records, developed ML model to determine
-            market prices. Made ~$50k from 9 algorithmic deals in 12 months.
+            Trained a price model on millions of real estate sales records, then
+            put $300k of my own money behind it. Made ~$50k on 9 algorithmic
+            deals in 12 months without visiting a single apartment.
           </>,
           <>
-            Raised $1.5M from network. Secured first enterprise client (Rosbank) for
-            mortgage deal assessment pilot.
+            Raised $1.5M. Signed Rosbank as the first enterprise client for a
+            mortgage assessment pilot. Shut down when the war collapsed the
+            market.
           </>,
         ],
         images: [],
       },
       {
-        company: "Hotel CRM (Exit)",
+        company: "Hotel CRM",
         timeframe: "2015 – 2017",
-        role: "Co-Founder",
+        role: "Cofounder — exit",
         achievements: [
           <>
-            Built a B2B SaaS CRM for small hotels. Grew to 100 employees, 5 engineers,
-            $8M in GMV. Sold part of the company within 18 months.
+            B2B SaaS CRM for small hotels. Grew to 100 employees and $8M GMV,
+            sold part of the company within 18 months.
           </>,
         ],
         images: [],
@@ -171,12 +189,9 @@ const about: About = {
         role: "Business Consultant",
         achievements: [
           <>
-            Delivered projects for PepsiCo, Mondelez, Etihad, AB InBev, and PMI across
-            Denmark, Italy, Russia, UAE, and Egypt.
-          </>,
-          <>
-            Earned top performance ratings and multiple promotions. Completed MBA at
-            University of Illinois while sponsored by Accenture.
+            Delivered projects for PepsiCo, Mondelez, Etihad, AB InBev, and PMI
+            across Denmark, Italy, Russia, the UAE, and Egypt. Top performance
+            ratings, several promotions, MBA sponsored by the firm.
           </>,
         ],
         images: [],
@@ -189,7 +204,7 @@ const about: About = {
     institutions: [
       {
         name: "University of Illinois",
-        description: <>MBA program, sponsored by Accenture.</>,
+        description: <>MBA, sponsored by Accenture.</>,
       },
       {
         name: "Moscow University (MESI)",
@@ -199,26 +214,35 @@ const about: About = {
   },
   technical: {
     display: true,
-    title: "Technical Skills",
+    title: "What I Work On",
     skills: [
       {
-        title: "AI / ML",
+        title: "Agentic systems",
         description: (
-          <>Embeddings, RAG, fine-tuning, foundational models, agentic pipelines, EEG processing.</>
+          <>
+            Long-running agent pipelines, tool use, evaluation, and the
+            unglamorous parts: retries, state, and knowing when to stop.
+          </>
         ),
         images: [],
       },
       {
-        title: "Full Stack",
+        title: "Applied ML",
         description: (
-          <>Next.js, React, TypeScript, Python, Node.js. Ship code every day.</>
+          <>
+            Embeddings, RAG, chunking strategy, fine-tuning, and inference cost.
+            Comfortable in the weeds of a model, not a researcher.
+          </>
         ),
         images: [],
       },
       {
-        title: "Product & Startups",
+        title: "Full stack",
         description: (
-          <>1 exit, 5 funded startups, 20+ shipped products. From idea to users.</>
+          <>
+            Next.js, React, TypeScript, Python, Rust where it matters. I ship the
+            whole thing, from schema to landing page.
+          </>
         ),
         images: [],
       },
@@ -228,16 +252,16 @@ const about: About = {
 
 const blog: Blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about tech and life...",
-  description: `Read what ${person.name} has been up to recently`,
+  label: "Writing",
+  title: "Writing",
+  description: `Essays by ${person.name}`,
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Tech projects by ${person.name}`,
+  title: "Work",
+  description: `Selected projects by ${person.name}`,
 };
 
 const gallery: Gallery = {
