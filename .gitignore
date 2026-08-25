@@ -51,3 +51,10 @@ http_*.json
 /*.jpeg
 /*.jpg
 /*.yml
+
+# scratch screenshots and throwaway files at the repo root
+# (root-anchored so public/images/** is unaffected)
+/*.png
+/*.jpg
+/*.jpeg
+/scripts/
