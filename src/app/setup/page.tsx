@@ -30,67 +30,67 @@ const hardware: SetupItem[] = [
   {
     name: "Samsung 57\" Odyssey Neo G9 (G95NC)",
     description:
-      "8K+ curved monitor — immersive workspace for research and side tasks",
+      "8K+ curved monitor. Immersive workspace for research and side tasks.",
   },
   {
     name: "Dell UltraSharp U4025QW 40\"",
     description:
-      "5K2K ultrawide — primary display for coding and multitasking",
+      "5K2K ultrawide. Primary display for coding and multitasking.",
   },
   {
     name: "MacBook Pro M4",
     description:
-      "Main development machine — waiting for Mac Studio to replace it",
+      "Main development machine, waiting for a Mac Studio to replace it.",
   },
   {
     name: "AMD Threadripper 9980X",
     description:
-      "200 GB RAM workstation for heavy ML workloads and parallel builds",
+      "200 GB RAM workstation for heavy ML workloads and parallel builds.",
   },
   {
     name: "HUGE Trackball Mouse",
     description:
-      "Ergonomic trackball — saves my wrist during long sessions",
+      "Ergonomic trackball. Saves my wrist during long sessions.",
   },
   {
     name: "Apple Magic Keyboard",
     description:
-      "Low-profile keyboard for a clean, minimal desk",
+      "Low-profile keyboard for a clean, minimal desk.",
   },
   {
     name: "Logi Keypad",
     description:
-      "Programmable macro pad for custom shortcuts and workflow automation",
+      "Programmable macro pad for custom shortcuts and workflow automation.",
   },
   {
     name: "Logi Ultra-Wide 4K Camera",
     description:
-      "High-quality webcam for calls and recordings",
+      "High-quality webcam for calls and recordings.",
   },
   {
     name: "Bose Headphones (latest, noise cancelling)",
     description:
-      "Active noise cancellation — essential for deep work",
+      "Active noise cancellation, essential for deep work.",
   },
   {
     name: "AirPods Pro 3",
     description:
-      "Dual audio — connected to both Mac and Windows simultaneously",
+      "Dual audio, connected to both Mac and Windows simultaneously.",
   },
   {
     name: "Philips Speech One",
     description:
-      "Professional dictation microphone for crystal-clear voice input",
+      "Professional dictation microphone for crystal-clear voice input.",
   },
   {
     name: "Savant Elite Pedals",
     description:
-      "Foot pedals for extra input — because hands aren't enough",
+      "Foot pedals for extra input, because two hands are not enough.",
   },
   {
     name: "SKG Foot Massager",
     description:
-      "Your feet deserve care during marathon coding sessions",
+      "Your feet deserve care during marathon coding sessions.",
   },
   {
     name: "Two water bottles",
@@ -98,27 +98,112 @@ const hardware: SetupItem[] = [
   },
 ];
 
-const software: SetupItem[] = [
+const aiCoding: SetupItem[] = [
   {
     name: "Claude Code",
     description:
-      "AI-powered coding — running 20 agents in parallel for maximum velocity",
+      "Where most of my code gets written. I run many agents in parallel rather than one at a time.",
+  },
+  {
+    name: "Conductor",
+    description:
+      "Orchestrates parallel Claude Code sessions across worktrees so agents do not collide.",
+  },
+  {
+    name: "Cursor / Windsurf",
+    description:
+      "Kept around for inline editing and for comparing how different agent harnesses behave.",
+  },
+  {
+    name: "Ollama",
+    description:
+      "Local models. Useful when a task should never leave the machine.",
   },
   {
     name: "Fazm",
     description:
-      "AI assistant for day-to-day tasks, planning, and operations",
+      "My own voice-first agent for day-to-day operations, planning, and Mac control.",
     link: "https://fazm.ai/m",
   },
+];
+
+const development: SetupItem[] = [
   {
-    name: "Arc Browser",
+    name: "zsh + Homebrew",
     description:
-      "Modern browser with spaces, profiles, and a clean UI",
+      "pyenv, nvm, bun, deno, and pnpm side by side. Every runtime a project might ask for.",
   },
+  {
+    name: "gh and glab",
+    description:
+      "GitHub and GitLab from the terminal. Agents drive these more than I do now.",
+  },
+  {
+    name: "Docker + UTM",
+    description:
+      "Containers for services, full VMs when something needs a whole machine to break.",
+  },
+  {
+    name: "TablePlus + RedisInsight",
+    description:
+      "Postgres, MySQL, Mongo, and Redis in one place instead of four CLIs.",
+  },
+  {
+    name: "ffmpeg, jq, pandoc",
+    description:
+      "The three tools that quietly solve most data-wrangling problems.",
+  },
+  {
+    name: "Xcode",
+    description: "For anything that has to ship to an Apple device.",
+  },
+];
+
+const inputVoice: SetupItem[] = [
   {
     name: "Wispr Flow",
     description:
-      "Voice-to-text that actually works — dictate code, messages, and notes",
+      "Voice-to-text that actually works. I dictate code, messages, and notes.",
+  },
+  {
+    name: "superwhisper",
+    description:
+      "Local transcription for anything I would rather not send to a server.",
+  },
+  {
+    name: "Karabiner-Elements",
+    description:
+      "Remaps the keyboard at the OS level. The foot pedals route through here.",
+  },
+  {
+    name: "Homerow",
+    description:
+      "Keyboard-driven clicking. Cuts most of the reaching for the trackball.",
+  },
+];
+
+const everythingElse: SetupItem[] = [
+  {
+    name: "Arc Browser",
+    description: "Spaces and profiles keep client work separate from my own.",
+  },
+  {
+    name: "Obsidian",
+    description:
+      "Plain-text notes I own. Everything durable ends up here eventually.",
+  },
+  {
+    name: "Superhuman",
+    description: "Email, kept to a few minutes a day.",
+  },
+  {
+    name: "Beeper",
+    description:
+      "Telegram, Signal, WhatsApp, Slack, and Discord in one inbox instead of five.",
+  },
+  {
+    name: "Screen Studio",
+    description: "Demo recordings that do not look like screen recordings.",
   },
 ];
 
@@ -200,9 +285,8 @@ export default function Setup() {
             variant="heading-default-xl"
             paddingBottom="32"
           >
-            I spend most of my day at this desk, so I&apos;ve optimized every
-            inch of it. Here&apos;s the hardware and software that powers my
-            workflow.
+            I spend most of my day at this desk, so I have optimized every inch
+            of it. Here is what I actually use.
           </Text>
         </Column>
       </Column>
@@ -213,7 +297,19 @@ export default function Setup() {
 
       <Line />
 
-      <SetupSection title="Software" items={software} />
+      <SetupSection title="AI and coding" items={aiCoding} />
+
+      <Line />
+
+      <SetupSection title="Development" items={development} />
+
+      <Line />
+
+      <SetupSection title="Input and voice" items={inputVoice} />
+
+      <Line />
+
+      <SetupSection title="Everything else" items={everythingElse} />
     </Column>
   );
 }
