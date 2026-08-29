@@ -58,10 +58,10 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <Column fillWidth gap="20" paddingTop="24">
-        <Heading wrap="balance" variant="display-strong-l">
+        <Heading wrap="balance" variant="heading-strong-xl">
           {home.headline}
         </Heading>
-        <Text variant="heading-default-l" onBackground="neutral-weak" wrap="balance">
+        <Text variant="heading-default-m" onBackground="neutral-weak" wrap="balance">
           {home.subline}
         </Text>
         <Column gap="8" paddingTop="4">
