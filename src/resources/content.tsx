@@ -56,19 +56,14 @@ const home: Home = {
   label: "Home",
   title: "Matthew Diakonov",
   description:
-    "Engineer and founder in San Francisco. Cofounded screenpipe (YC S26). Building agentic software.",
-  headline: <>I build agentic software.</>,
+    "Engineer and founder in San Francisco. Cofounded screenpipe (YC S26). Builds agents that run without supervision.",
+  headline: <>Math and CS olympiads, then agents that run without supervision.</>,
   featured: {
     display: false,
     title: <>S4L</>,
     href: "/work/s4l",
   },
-  subline: (
-    <>
-      Engineer and founder in San Francisco. Building companies since 2008, here
-      since 2022.
-    </>
-  ),
+  subline: <>Engineer and founder in San Francisco.</>,
 };
 
 const about: About = {
@@ -143,7 +138,7 @@ const about: About = {
         achievements: [
           <>
             Cofounded screenpipe: continuous local screen and audio capture that
-            feeds context to coding agents. 21k GitHub stars, YC S26, $2.85M
+            feeds context to coding agents. 21k GitHub stars, YC S26, $3M
             raised.
           </>,
           <>
