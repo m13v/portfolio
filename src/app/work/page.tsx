@@ -23,7 +23,7 @@ export async function generateMetadata() {
 }
 
 // Kept in sync with FEATURED on the homepage.
-const FEATURED = ["s4l", "screenpipe", "mediar", "fazm", "omi", "image-gen-tool"];
+const FEATURED = ["s4l", "mediar", "fazm", "omi", "screenpipe", "image-gen-tool"];
 
 export default function Work() {
   const archive = getPosts(["src", "app", "work", "projects"])
