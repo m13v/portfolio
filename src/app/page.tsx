@@ -76,7 +76,8 @@ export default function Home() {
             .
           </Text>
           <Text variant="body-default-l" onBackground="neutral-medium">
-            I built and sold a company in eighteen months.
+            I built and sold a B2B SaaS company (a hotel channel manager) in
+            eighteen months.
           </Text>
           <Text variant="body-default-l" onBackground="neutral-medium">
             I cofounded{" "}
@@ -86,8 +87,9 @@ export default function Home() {
             : 21k GitHub stars, YC S26, $3M raised.
           </Text>
           <Text variant="body-default-l" onBackground="neutral-medium">
-            Now at <SmartLink href="https://sundial.md">Sundial</SmartLink>.
-            Previously <SmartLink href="https://s4l.ai">S4L</SmartLink>.
+            Now at <SmartLink href="https://sundial.md">Sundial</SmartLink>{" "}
+            (backed by a16z Speedrun). Previously{" "}
+            <SmartLink href="https://s4l.ai">S4L</SmartLink>.
           </Text>
         </Column>
         <Row gap="12" wrap paddingTop="12">
