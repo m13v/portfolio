@@ -66,6 +66,9 @@ export default function Home() {
         </Text>
         <Column gap="8" paddingTop="4">
           <Text variant="body-default-l" onBackground="neutral-medium">
+            Math and computer science olympiads.
+          </Text>
+          <Text variant="body-default-l" onBackground="neutral-medium">
             Cited multiple times in{" "}
             <SmartLink href="https://github.com/m13v">
               GitHub trending developers
