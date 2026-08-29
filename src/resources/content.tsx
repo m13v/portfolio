@@ -57,7 +57,7 @@ const home: Home = {
   title: "Matthew Diakonov",
   description:
     "Engineer and founder in San Francisco. Cofounded screenpipe (YC S26). Builds agents that run without supervision.",
-  headline: <>Math and CS olympiads, then agents that run without supervision.</>,
+  headline: <>{person.name}</>,
   featured: {
     display: false,
     title: <>S4L</>,
