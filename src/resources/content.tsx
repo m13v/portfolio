@@ -100,7 +100,7 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "Sundial",
+        company: "Sundial (backed by a16z Speedrun)",
         timeframe: "2026 to Present",
         role: "Cofounder (trial)",
         achievements: [
@@ -167,13 +167,13 @@ const about: About = {
         images: [],
       },
       {
-        company: "Hotel CRM",
+        company: "Hotel Channel Manager",
         timeframe: "2015 to 2017",
         role: "Cofounder (exit)",
         achievements: [
           <>
-            B2B SaaS CRM for small hotels. Grew to 100 employees and $8M GMV,
-            sold part of the company within 18 months.
+            B2B SaaS channel manager for small hotels. Grew to 100 employees
+            and $8M GMV, sold part of the company within 18 months.
           </>,
         ],
         images: [],
