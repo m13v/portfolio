@@ -22,6 +22,7 @@ const routes: RoutesConfig = {
   "/blog": true,
   "/gallery": false,
   "/setup": true,
+  "/beliefs": true,
 };
 
 const display: DisplayConfig = {
