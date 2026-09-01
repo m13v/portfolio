@@ -25,9 +25,53 @@ export async function generateMetadata() {
 // Kept in sync with FEATURED on the homepage.
 const FEATURED = ["s4l", "mediar", "fazm", "omi", "screenpipe", "image-gen-tool"];
 
+// Every project, bucketed by what it actually is. Order within a category is
+// deliberate, strongest first.
+const CATEGORIES: { title: string; slugs: string[] }[] = [
+  {
+    title: "agents & automation",
+    slugs: ["s4l", "fazm", "mediar", "holodeck", "reddit-linkedin-repost"],
+  },
+  { title: "context & capture", slugs: ["screenpipe", "omi"] },
+  {
+    title: "retrieval",
+    slugs: [
+      "county-law-rag",
+      "sema-arxiv-search",
+      "semantic-chunking",
+      "youtube-gpt",
+      "gemini-4-docs",
+      "docs2cli",
+    ],
+  },
+  {
+    title: "generative media",
+    slugs: ["image-gen-tool", "realtime-sora", "virtual-try-on"],
+  },
+  {
+    title: "developer tools",
+    slugs: ["gpt-auto-debugger", "shadcn-for-ai", "getq", "gpt-vs-gemini"],
+  },
+  {
+    title: "consumer",
+    slugs: ["betzy", "feliciti", "newcomers", "timetree", "ai-sales-assistant"],
+  },
+];
+
 export default function Work() {
-  const archive = getPosts(["src", "app", "work", "projects"])
-    .filter((post) => !FEATURED.includes(post.slug))
+  const all = getPosts(["src", "app", "work", "projects"]);
+  const bySlug = new Map(all.map((post) => [post.slug, post]));
+
+  const categories = CATEGORIES.map((category) => ({
+    title: category.title,
+    items: category.slugs
+      .map((slug) => bySlug.get(slug))
+      .filter((post): post is NonNullable<typeof post> => Boolean(post)),
+  })).filter((category) => category.items.length > 0);
+
+  const categorised = new Set(CATEGORIES.flatMap((c) => c.slugs));
+  const uncategorised = all
+    .filter((post) => !categorised.has(post.slug))
     .sort(
       (a, b) =>
         new Date(b.metadata.publishedAt).getTime() -
@@ -53,7 +97,7 @@ export default function Work() {
       <Column paddingX="l" gap="12">
         <Heading variant="display-strong-s">Selected work</Heading>
         <Text variant="body-default-l" onBackground="neutral-weak">
-          The six that matter most. Everything else is in the archive below.
+          The six that matter most. Everything else is grouped below.
         </Text>
       </Column>
 
@@ -65,47 +109,49 @@ export default function Work() {
 
       <Column paddingX="l" gap="16">
         <Heading as="h2" variant="heading-strong-l">
-          Archive
+          Everything
         </Heading>
         <Text variant="body-default-m" onBackground="neutral-weak">
-          Earlier experiments, hackathon builds, and tools that did their job and
-          stopped.
+          Every project, grouped by what it is.
         </Text>
-        <Column fillWidth gap="2" paddingTop="8">
-          {archive.map((post) => (
-            <SmartLink
-              key={post.slug}
-              href={`/work/${post.slug}`}
-              style={{ width: "100%" }}
-            >
-              <Row
-                fillWidth
-                paddingY="12"
-                paddingX="12"
-                gap="16"
-                vertical="center"
-                radius="m"
-                className="hover-surface"
-                s={{ direction: "column", gap: "4", align: "start" }}
-              >
-                <Text
-                  variant="heading-strong-s"
-                  style={{ minWidth: "10rem", flexShrink: 0 }}
-                >
-                  {post.metadata.title}
-                </Text>
-                <Text
-                  variant="body-default-s"
-                  onBackground="neutral-weak"
-                  style={{ flex: 1, minWidth: 0 }}
-                >
-                  {post.metadata.summary}
-                </Text>
-              </Row>
-            </SmartLink>
+
+        <div className="categoryGrid">
+          {categories.map((category) => (
+            <Column key={category.title} gap="8" fillWidth>
+              <Text variant="label-strong-s" onBackground="neutral-strong">
+                {category.title}
+              </Text>
+              <Column gap="4" fillWidth>
+                {category.items.map((post) => (
+                  <SmartLink key={post.slug} href={`/work/${post.slug}`}>
+                    <Text variant="body-default-s" onBackground="neutral-medium">
+                      {post.metadata.title}
+                    </Text>
+                  </SmartLink>
+                ))}
+              </Column>
+            </Column>
           ))}
-        </Column>
+
+          {uncategorised.length > 0 && (
+            <Column gap="8" fillWidth>
+              <Text variant="label-strong-s" onBackground="neutral-strong">
+                other
+              </Text>
+              <Column gap="4" fillWidth>
+                {uncategorised.map((post) => (
+                  <SmartLink key={post.slug} href={`/work/${post.slug}`}>
+                    <Text variant="body-default-s" onBackground="neutral-medium">
+                      {post.metadata.title}
+                    </Text>
+                  </SmartLink>
+                ))}
+              </Column>
+            </Column>
+          )}
+        </div>
       </Column>
+
     </Column>
   );
 }

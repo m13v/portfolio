@@ -78,3 +78,23 @@ body {
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+
+/* Project category index on /work: masonry-style columns of topic buckets */
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--static-space-32) var(--static-space-24);
+  width: 100%;
+  align-items: start;
+  padding-top: var(--static-space-8);
+}
+@media (max-width: 900px) {
+  .categoryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .categoryGrid {
+    grid-template-columns: 1fr;
+  }
+}
