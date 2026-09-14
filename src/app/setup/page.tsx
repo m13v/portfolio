@@ -105,21 +105,6 @@ const aiCoding: SetupItem[] = [
       "Where most of my code gets written. I run many agents in parallel rather than one at a time.",
   },
   {
-    name: "Conductor",
-    description:
-      "Orchestrates parallel Claude Code sessions across worktrees so agents do not collide.",
-  },
-  {
-    name: "Cursor / Windsurf",
-    description:
-      "Kept around for inline editing and for comparing how different agent harnesses behave.",
-  },
-  {
-    name: "Ollama",
-    description:
-      "Local models. Useful when a task should never leave the machine.",
-  },
-  {
     name: "Fazm",
     description:
       "My own voice-first agent for day-to-day operations, planning, and Mac control.",
@@ -134,19 +119,18 @@ const development: SetupItem[] = [
       "pyenv, nvm, bun, deno, and pnpm side by side. Every runtime a project might ask for.",
   },
   {
-    name: "gh and glab",
+    name: "gh",
     description:
-      "GitHub and GitLab from the terminal. Agents drive these more than I do now.",
+      "GitHub from the terminal. Agents drive it more than I do now.",
   },
   {
-    name: "Docker + UTM",
-    description:
-      "Containers for services, full VMs when something needs a whole machine to break.",
+    name: "Docker",
+    description: "Containers for anything with more than one moving part.",
   },
   {
-    name: "TablePlus + RedisInsight",
+    name: "TablePlus",
     description:
-      "Postgres, MySQL, Mongo, and Redis in one place instead of four CLIs.",
+      "Postgres, MySQL, and Mongo in one place instead of three CLIs.",
   },
   {
     name: "ffmpeg, jq, pandoc",
@@ -164,11 +148,6 @@ const inputVoice: SetupItem[] = [
     name: "Wispr Flow",
     description:
       "Voice-to-text that actually works. I dictate code, messages, and notes.",
-  },
-  {
-    name: "superwhisper",
-    description:
-      "Local transcription for anything I would rather not send to a server.",
   },
   {
     name: "Karabiner-Elements",
@@ -191,19 +170,6 @@ const everythingElse: SetupItem[] = [
     name: "Obsidian",
     description:
       "Plain-text notes I own. Everything durable ends up here eventually.",
-  },
-  {
-    name: "Superhuman",
-    description: "Email, kept to a few minutes a day.",
-  },
-  {
-    name: "Beeper",
-    description:
-      "Telegram, Signal, WhatsApp, Slack, and Discord in one inbox instead of five.",
-  },
-  {
-    name: "Screen Studio",
-    description: "Demo recordings that do not look like screen recordings.",
   },
 ];
 
