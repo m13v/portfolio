@@ -88,10 +88,9 @@ const about: About = {
     description: (
       <>
         I live in San Francisco and build agentic software: developer tools, LLM
-        pipelines, and consumer products. CS degree, MBA, five years at Accenture
-        Strategy, then a B2B SaaS company I cofounded and sold. Since 2022 I have
-        been building in the US, most recently as a cofounder of screenpipe and
-        founder of S4L.
+        pipelines, and consumer products. Math and computer science olympiads,
+        then a CS degree. I built and sold a B2B SaaS hotel channel manager, and
+        cofounded screenpipe. Now on a cofounder trial at Sundial.
       </>
     ),
   },
@@ -101,7 +100,7 @@ const about: About = {
     experiences: [
       {
         company: "Sundial (backed by a16z Speedrun)",
-        timeframe: "2026 to Present",
+        timeframe: "Present",
         role: "Cofounder (trial)",
         achievements: [
           <>
@@ -114,7 +113,7 @@ const about: About = {
       },
       {
         company: "S4L (s4l.ai)",
-        timeframe: "2025 to Present",
+        timeframe: "",
         role: "Founder",
         achievements: [
           <>
@@ -133,7 +132,7 @@ const about: About = {
       },
       {
         company: "screenpipe / Mediar",
-        timeframe: "2024 to 2025",
+        timeframe: "",
         role: "Cofounder",
         achievements: [
           <>
@@ -150,7 +149,7 @@ const about: About = {
       },
       {
         company: "ARINA (AI Real Estate)",
-        timeframe: "2019 to 2022",
+        timeframe: "",
         role: "Founder & CEO",
         achievements: [
           <>
@@ -168,25 +167,12 @@ const about: About = {
       },
       {
         company: "Hotel Channel Manager",
-        timeframe: "2015 to 2017",
+        timeframe: "",
         role: "Cofounder (exit)",
         achievements: [
           <>
             B2B SaaS channel manager for small hotels. Grew to 100 employees
             and $8M GMV, sold part of the company within 18 months.
-          </>,
-        ],
-        images: [],
-      },
-      {
-        company: "Accenture Strategy",
-        timeframe: "2010 to 2015",
-        role: "Business Consultant",
-        achievements: [
-          <>
-            Delivered projects for PepsiCo, Mondelez, Etihad, AB InBev, and PMI
-            across Denmark, Italy, Russia, the UAE, and Egypt. Top performance
-            ratings, several promotions, MBA sponsored by the firm.
           </>,
         ],
         images: [],
@@ -197,10 +183,6 @@ const about: About = {
     display: true,
     title: "Education",
     institutions: [
-      {
-        name: "University of Illinois",
-        description: <>MBA, sponsored by Accenture.</>,
-      },
       {
         name: "Moscow University (MESI)",
         description: <>Computer Science. Entered through Math Olympiad.</>,
