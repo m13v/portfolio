@@ -28,7 +28,7 @@ const beliefs: { claim: string; body: string }[] = [
   },
   {
     claim: "Meditation is a sport, not a religion.",
-    body: "You manage your mind the way you manage balance on a yoga mat: badly at first, then less badly, through repetition. I avoided it for years because I assumed the opposite.",
+    body: "You manage your mind the way you manage balance on a yoga mat: badly at first, then less badly, through repetition. I avoided it for years because I assumed the opposite. The framing is not mine, it is Kate's, and it is the reason I finally sat a course.",
   },
   {
     claim: "Credentials do not transfer across borders.",
