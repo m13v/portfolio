@@ -66,7 +66,7 @@ export default function Home() {
         </Text>
         <Column gap="8" paddingTop="4">
           <Text variant="body-default-l" onBackground="neutral-medium">
-            Math and computer science olympiads.
+            Won math and computer science olympiads.
           </Text>
           <Text variant="body-default-l" onBackground="neutral-medium">
             Cited multiple times in{" "}
@@ -76,19 +76,20 @@ export default function Home() {
             .
           </Text>
           <Text variant="body-default-l" onBackground="neutral-medium">
-            I built and sold a B2B SaaS company (a hotel channel manager) in
-            eighteen months.
+            Built and sold a B2B SaaS hotel channel manager in eighteen
+            months.
           </Text>
           <Text variant="body-default-l" onBackground="neutral-medium">
-            I cofounded{" "}
+            Cofounded{" "}
             <SmartLink href="https://github.com/mediar-ai/screenpipe">
               screenpipe
             </SmartLink>
             : 21k GitHub stars, YC S26, $3M raised.
           </Text>
           <Text variant="body-default-l" onBackground="neutral-medium">
-            Now at <SmartLink href="https://sundial.md">Sundial</SmartLink>{" "}
-            (backed by a16z Speedrun). Previously{" "}
+            Now building agent infrastructure at{" "}
+            <SmartLink href="https://sundial.md">Sundial</SmartLink>, backed by
+            a16z Speedrun. Previously{" "}
             <SmartLink href="https://s4l.ai">S4L</SmartLink>.
           </Text>
         </Column>
