@@ -99,14 +99,14 @@ body {
   }
 }
 
-/* Intro bullet list on /about */
-.introList {
+/* Fact bullet list in the home hero */
+.factList {
   margin: 0;
   padding-left: 1.1rem;
   display: flex;
   flex-direction: column;
   gap: var(--static-space-8);
 }
-.introList li {
+.factList li {
   padding-left: 0.2rem;
 }

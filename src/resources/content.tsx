@@ -86,18 +86,12 @@ const about: About = {
     display: true,
     title: "Introduction",
     description: (
-      <ul className="introList">
-        <li>Won math and computer science olympiads.</li>
-        <li>Cited multiple times in GitHub trending developers.</li>
-        <li>
-          Built and sold a B2B SaaS hotel channel manager in eighteen months.
-        </li>
-        <li>Cofounded screenpipe: 21k GitHub stars, YC S26, $3M raised.</li>
-        <li>
-          Now building infrastructure for human-agent collaboration at Sundial
-          in San Francisco, backed by a16z Speedrun.
-        </li>
-      </ul>
+      <>
+        I live in San Francisco and build agentic software: developer tools, LLM
+        pipelines, and consumer products. Math and computer science olympiads,
+        then a CS degree. I built and sold a B2B SaaS hotel channel manager, and
+        cofounded screenpipe. Now on a cofounder trial at Sundial.
+      </>
     ),
   },
   work: {

@@ -64,29 +64,29 @@ export default function Home() {
         <Text variant="heading-default-m" onBackground="neutral-weak" wrap="balance">
           {home.subline}
         </Text>
-        <Column gap="8" paddingTop="4">
-          <Text variant="body-default-l" onBackground="neutral-medium">
+        <Column as="ul" className="factList" gap="8" paddingTop="4">
+          <Text as="li" variant="body-default-l" onBackground="neutral-medium">
             Won math and computer science olympiads.
           </Text>
-          <Text variant="body-default-l" onBackground="neutral-medium">
+          <Text as="li" variant="body-default-l" onBackground="neutral-medium">
             Cited multiple times in{" "}
             <SmartLink href="https://github.com/m13v">
               GitHub trending developers
             </SmartLink>
             .
           </Text>
-          <Text variant="body-default-l" onBackground="neutral-medium">
+          <Text as="li" variant="body-default-l" onBackground="neutral-medium">
             Built and sold a B2B SaaS hotel channel manager in eighteen
             months.
           </Text>
-          <Text variant="body-default-l" onBackground="neutral-medium">
+          <Text as="li" variant="body-default-l" onBackground="neutral-medium">
             Cofounded{" "}
             <SmartLink href="https://github.com/mediar-ai/screenpipe">
               screenpipe
             </SmartLink>
             : 21k GitHub stars, YC S26, $3M raised.
           </Text>
-          <Text variant="body-default-l" onBackground="neutral-medium">
+          <Text as="li" variant="body-default-l" onBackground="neutral-medium">
             Now building agent infrastructure at{" "}
             <SmartLink href="https://sundial.md">Sundial</SmartLink>, backed by
             a16z Speedrun. Previously{" "}
