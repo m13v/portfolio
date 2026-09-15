@@ -81,16 +81,11 @@ export default function Home() {
             <SmartLink href="https://github.com/mediar-ai/screenpipe">
               screenpipe
             </SmartLink>
-            : the #1 trending project on GitHub, 21k stars, $0 to $15k MRR, YC
-            S26.
+            : #1 trending on GitHub, 21k stars, $15k MRR, YC S26.
           </Text>
           <Text as="li" variant="body-default-l" onBackground="neutral-medium">
             Built and sold a B2B SaaS hotel channel manager in eighteen
             months.
-          </Text>
-          <Text as="li" variant="body-default-l" onBackground="neutral-medium">
-            Now building agent infrastructure at{" "}
-            <SmartLink href="https://sundial.md">Sundial</SmartLink>.
           </Text>
         </Column>
 
