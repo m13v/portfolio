@@ -90,7 +90,7 @@ const about: About = {
         I live in San Francisco and build agentic software: developer tools, LLM
         pipelines, and consumer products. Math and computer science olympiads,
         then a CS degree. I built and sold a B2B SaaS hotel channel manager, and
-        cofounded screenpipe. Now on a cofounder trial at Sundial.
+        cofounded screenpipe. Now CTO and cofounder at Sundial.
       </>
     ),
   },
@@ -101,7 +101,7 @@ const about: About = {
       {
         company: "Sundial (backed by a16z Speedrun)",
         timeframe: "Present",
-        role: "Cofounder (trial)",
+        role: "Cofounder, CTO",
         achievements: [
           <>
             Infrastructure for human-agent collaboration: making agent work

@@ -24,7 +24,8 @@ export async function generateMetadata() {
 }
 
 // Six projects that carry the strongest evidence. Everything else lives on /work.
-const FEATURED = ["s4l", "mediar", "fazm", "omi", "screenpipe", "image-gen-tool"];
+// Three, deliberately. Fewer bigger things read stronger than six.
+const FEATURED = ["screenpipe", "mediar", "omi"];
 
 export default function Home() {
   const bySlug = new Map(
@@ -69,30 +70,30 @@ export default function Home() {
             Won math and computer science olympiads.
           </Text>
           <Text as="li" variant="body-default-l" onBackground="neutral-medium">
-            Cited multiple times in{" "}
+            Top 3 engineer on{" "}
             <SmartLink href="https://github.com/m13v">
-              GitHub trending developers
+              GitHub trending
             </SmartLink>
             .
-          </Text>
-          <Text as="li" variant="body-default-l" onBackground="neutral-medium">
-            Built and sold a B2B SaaS hotel channel manager in eighteen
-            months.
           </Text>
           <Text as="li" variant="body-default-l" onBackground="neutral-medium">
             Cofounded{" "}
             <SmartLink href="https://github.com/mediar-ai/screenpipe">
               screenpipe
             </SmartLink>
-            : 21k GitHub stars, YC S26, $3M raised.
+            : the #1 trending project on GitHub, 21k stars, $0 to $15k MRR, YC
+            S26.
+          </Text>
+          <Text as="li" variant="body-default-l" onBackground="neutral-medium">
+            Built and sold a B2B SaaS hotel channel manager in eighteen
+            months.
           </Text>
           <Text as="li" variant="body-default-l" onBackground="neutral-medium">
             Now building agent infrastructure at{" "}
-            <SmartLink href="https://sundial.md">Sundial</SmartLink>, backed by
-            a16z Speedrun. Previously{" "}
-            <SmartLink href="https://s4l.ai">S4L</SmartLink>.
+            <SmartLink href="https://sundial.md">Sundial</SmartLink>.
           </Text>
         </Column>
+
         <Row gap="12" wrap paddingTop="12">
           <Button
             href={about.path}
@@ -168,35 +169,6 @@ export default function Home() {
         <Row paddingX="12">
           <Button href={work.path} variant="tertiary" size="s" arrowIcon>
             All projects
-          </Button>
-        </Row>
-      </Column>
-
-      <Row fillWidth>
-        <Line />
-      </Row>
-
-      {/* ── BACKGROUND ── */}
-      <Column fillWidth gap="16">
-        <Heading as="h2" variant="heading-strong-l">
-          Background
-        </Heading>
-        <Text variant="body-default-l" onBackground="neutral-medium">
-          I moved to San Francisco with no network and rusty code, and have been
-          rebuilding from zero here ever since: shipping products, meeting
-          people, and learning what actually holds up in this market.
-        </Text>
-        <Row gap="12" wrap>
-          <Button href={about.path} variant="tertiary" size="s" arrowIcon>
-            Full background
-          </Button>
-          <Button
-            href="/blog/from-zero-in-san-francisco"
-            variant="tertiary"
-            size="s"
-            arrowIcon
-          >
-            The long version
           </Button>
         </Row>
       </Column>
